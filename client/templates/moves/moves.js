@@ -49,6 +49,6 @@ var movesData = [
   },
 ];
 
-Template.moves.helpers({
-  moves: movesData
-});
+// Template.moves.helpers({
+//   moves: movesData
+// });

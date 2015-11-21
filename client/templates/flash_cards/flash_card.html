@@ -1,0 +1,15 @@
+<template name="flashCard">
+  <h2>
+    {{move_name}}
+  </h2>
+  <p>
+    {{question_text}}
+  </p>
+  <video data-question-video src="{{question_video_path}}">
+    It appears yours browser can't play videos
+  </video>
+  <div>
+    <button onclick="document.querySelector('[data-question-video]').play()">Play</button>
+    <button onclick="document.querySelector('[data-question-video]').pause()">Pause</button>
+  </div>
+</template>
