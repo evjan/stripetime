@@ -3,7 +3,8 @@ BJJ
 
 Todo
 --
-- Figure out the collections
+- Break them into steps
+- Play from YouTube instead? Can I pause? Or is this good enough?
 
 Description
 --
@@ -17,7 +18,7 @@ When looking at a move for the first time, the user can watch the entire video f
 
 Everyone have the same steps, but the cards are different since they get marked for different due dates. Hmm..
 
-Collections?
+Collections
 --
 - Move
 - Flash card / step

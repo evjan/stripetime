@@ -1,14 +1,35 @@
 <head>
-  <title>bjj</title>
+  <title>StripeTime</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  {{> moves }}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="moves">
+  <h2>White 2nd</h2>
+  These are the moves that you haven't looked at yet:
+  <ul>
+    {{#each moves}}
+      {{> move }}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="move">
+  <li>
+    <a href="#">
+      {{title}}
+    </a>
+    <div id="name">
+      <h3>{{title}}</h3>
+      <video id="video" src="{{video_path}}">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <div>
+        <button onclick="document.getElementById('video').play()">Play</button>
+        <button onclick="document.getElementById('video').pause()">Pause</button>
+      </div>
+    </div>
+  </li>
 </template>
