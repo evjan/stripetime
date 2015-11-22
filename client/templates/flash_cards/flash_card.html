@@ -6,7 +6,7 @@
     <p>
       {{question_text}}
     </p>
-    <video class="flash-card_video" src="{{video_path}}#t={{question_video_start}},{{question_video_end}}" autoplay muted>
+    <video autoplay class="flash-card_video" muted src="{{video_path}}#t={{question_video_start}},{{question_video_end}}">
       It appears your browser can't play videos
     </video>
     <div>
@@ -19,8 +19,8 @@
       <p>
         {{answer_text}}
       </p>
-      <button>I was right</button>
-      <button>I was wrong</button>
+      <button class="flash-card_wrong-answer">I was wrong</button>
+      <button class="flash-card_right-answer">I was right</button>
     </div>
   </div>
 </template>

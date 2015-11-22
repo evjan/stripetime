@@ -1,5 +1,7 @@
 <template name="home">
   <div class="container">
-    <a href="{{pathFor 'nextFlashCard'}}">Start studying</a>
+    {{#with randomCard}}
+      <a href="{{pathFor 'flashCard'}}">Start studying</a>
+    {{/with}}
   </div>
 </template>
