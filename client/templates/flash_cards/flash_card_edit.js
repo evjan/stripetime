@@ -1,3 +1,16 @@
+Template.flashCardEdit.onCreated(function() {
+  Session.set('flashCardEditErrors', {});
+});
+
+Template.flashCardEdit.helpers({
+  errorMessage: function(field) {
+    return Session.get('flashCardEditErrors')[field];
+  },
+  errorClass: function(field) {
+    return !!Session.get('flashCardEditErrors')[field] ? 'has-error' : '';
+  }
+});
+
 Template.flashCardEdit.events({
   "submit form": function(event, template) {
     event.preventDefault();
@@ -14,19 +27,15 @@ Template.flashCardEdit.events({
 
     var errors = validateFlashCard(flashCardProperties);
     if (_.size(errors) > 0) {
-      return Session.set('flashCardErrors', errors);
+      return Session.set('flashCardEditErrors', errors);
     }
 
     var currentFlashCardId = this._id;
-
-    FlashCards.update(currentFlashCardId, {
-      $set: flashCardProperties,
-      function(error) {
-        if (error) {
-          throwError(error.reason);
-        } else {
-          Router.go('flashCardsAdmin');
-        }
+    FlashCards.update(currentFlashCardId, { $set: flashCardProperties }, function(error) {
+      if (error) {
+        throwError(error.reason);
+      } else {
+        Router.go('flashCardsAdmin');
       }
     });
 

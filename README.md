@@ -3,6 +3,7 @@ BJJ
 
 Todo
 --
+- Display server errors
 - Add a card
 - Check if admin
 - Stop playing the answer
