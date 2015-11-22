@@ -3,7 +3,6 @@ BJJ
 
 Todo
 --
-- Stop playing the answer
 - Save the answer
 - Go to the next card
 - Add a card
