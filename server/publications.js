@@ -1,3 +1,3 @@
-Meteor.publish("flashCards", function(){
+Meteor.publish("flashCards", function() {
   return FlashCards.find();
 });
