@@ -3,8 +3,8 @@ BJJ
 
 Todo
 --
-- Save the answer
-- Go to the next card
+- Display buttons on top of video
+- "Play again" - what should it do after you've looked at the answer?
 - Play the video and select the start and end points in admin mode
 - Check if admin
 
