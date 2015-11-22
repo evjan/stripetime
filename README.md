@@ -5,8 +5,10 @@ Todo
 --
 - Playback is wonky when switching between cards, reset the timer when the page loads and disable autoplay
 - Display buttons on top of video
-- Remove admin things
 - "Play again" - what should it do after you've looked at the answer?
+
+Nice to haves
+- Re-add admin
 - Play the video and select the start and end points in admin mode
 - Check if admin
 
