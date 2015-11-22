@@ -3,7 +3,7 @@ BJJ
 
 Todo
 --
-- Display server errors
+- Clean up duplication in flash_card_edit.html
 - Add a card
 - Check if admin
 - Stop playing the answer
