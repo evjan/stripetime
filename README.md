@@ -3,8 +3,11 @@ BJJ
 
 Todo
 --
-- Break them into steps
-- Play from YouTube instead? Can I pause? Or is this good enough?
+- Edit a card
+- Add a card
+- Stop playing the answer
+- Save the answer
+- Go to the next card
 
 Description
 --
