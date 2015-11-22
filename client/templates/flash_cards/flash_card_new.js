@@ -1,8 +1,8 @@
-Template.flashCardEdit.onCreated(function() {
+Template.flashCardNew.onCreated(function() {
   Session.set('flashCardErrors', {});
 });
 
-Template.flashCardEdit.helpers({
+Template.flashCardNew.helpers({
   errorMessage: function(field) {
     return Session.get('flashCardErrors')[field];
   },
@@ -11,7 +11,7 @@ Template.flashCardEdit.helpers({
   }
 });
 
-Template.flashCardEdit.events({
+Template.flashCardNew.events({
   "submit form": function(event, template) {
     event.preventDefault();
 
@@ -32,10 +32,7 @@ Template.flashCardEdit.events({
       Session.set('flashCardErrors', {});
     }
 
-    var currentFlashCardId = this._id;
-    FlashCards.update(currentFlashCardId, {
-      $set: flashCardProperties
-    }, function(error) {
+    FlashCards.insert(flashCardProperties, function(error) {
       if (error) {
         throwError(error.reason);
       } else {

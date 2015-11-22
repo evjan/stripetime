@@ -3,12 +3,11 @@ BJJ
 
 Todo
 --
-- Clean up duplication in flash_card_edit.html
-- Add a card
-- Check if admin
 - Stop playing the answer
 - Save the answer
 - Go to the next card
+- Add a card
+- Check if admin
 
 Description
 --
