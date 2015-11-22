@@ -5,7 +5,7 @@ Todo
 --
 - Save the answer
 - Go to the next card
-- Add a card
+- Play the video and select the start and end points in admin mode
 - Check if admin
 
 Description
