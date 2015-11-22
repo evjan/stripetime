@@ -3,8 +3,8 @@ BJJ
 
 Todo
 --
-- Edit a card
 - Add a card
+- Check if admin
 - Stop playing the answer
 - Save the answer
 - Go to the next card
