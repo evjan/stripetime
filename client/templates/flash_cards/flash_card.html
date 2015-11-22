@@ -1,15 +1,27 @@
 <template name="flashCard">
-  <h2>
-    {{move_name}}
-  </h2>
-  <p>
-    {{question_text}}
-  </p>
-  <video data-question-video src="{{question_video_path}}">
-    It appears yours browser can't play videos
-  </video>
-  <div>
-    <button onclick="document.querySelector('[data-question-video]').play()">Play</button>
-    <button onclick="document.querySelector('[data-question-video]').pause()">Pause</button>
+  <div class="flash-card">
+    <h2>
+      {{move_name}}
+    </h2>
+    <p>
+      {{question_text}}
+    </p>
+    <video class="flash-card_video" src="{{video_path}}#t={{question_video_start}},{{question_video_end}}" controls autoplay muted>
+      It appears your browser can't play videos
+    </video>
+    <div>
+      <button class="flash-card_video-play btn">Play</button>
+      <button class="flash-card_video-pause btn">Pause</button>
+    </div>
+
+    <button class="btn flash-card_show-answer">Show answer</button>
+
+    <div class="flash-card_answer">
+      <p>
+        {{answer_text}}
+      </p>
+      <button>I was right</button>
+      <button>I was wrong</button>
+    </div>
   </div>
 </template>

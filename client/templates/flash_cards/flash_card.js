@@ -1,16 +1,16 @@
-var flashCardsData = [
-  {
-    moveName: "Test",
-    due: new Date(2015,11,21)
+Template.flashCard.events({
+  "click .flash-card_video-play": function(event, template) {
+    document.querySelector('video').play();
   },
-  {
-    moveName: "Test2",
-    due: new Date(2015,11,22)
-  }
-];
+  "click .flash-card_video-pause": function(event, template) {
+    document.querySelector('video').pause();
+  },
+  "click .flash-card_show-answer": function(event, template) {
+    var video = $(".flash-card_video")[0];
 
-// Template.currentFlashCard.helpers({
-//   currentCard: function(){
-//     return flashCardsData[0];
-//   }
-// });
+    video.currentTime = template.data.question_video_end;
+    video.play();
+
+    $(".flash-card_answer").show();
+  }
+});

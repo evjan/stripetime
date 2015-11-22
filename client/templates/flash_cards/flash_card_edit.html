@@ -1,0 +1,34 @@
+<template name="flashCardEdit">
+  <form class="">
+    <div class="form-group">
+      <label class="control-label" for="move_name">Move</label>
+      <input class="form-control" type="text" name="move_name" value="{{move_name}}">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="video_path">Video path</label>
+      <input class="form-control" type="text" name="video_path" value="{{video_path}}">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="question_text">Question text</label>
+      <input class="form-control" type="text" name="question_text" value="{{question_text}}">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="question_video_start">Question video start</label>
+      <input class="form-control" type="text" name="question_video_start" value="{{question_video_start}}">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="question_video_end">Question video end</label>
+      <input class="form-control" type="text" name="question_video_end" value="{{question_video_end}}">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="answer_video_end">Answer video end</label>
+      <input class="form-control" type="text" name="answer_video_end" value="{{answer_video_end}}">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="answer_text">Answer text</label>
+      <input class="form-control" type="text" name="answer_text" value="{{answer_text}}">
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Save">
+  </form>
+</template>

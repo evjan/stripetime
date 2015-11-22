@@ -1,0 +1,5 @@
+<template name="flashCardsAdmin">
+  {{#each flashCards}}
+    <a href="{{pathFor 'flashCardEdit'}}">{{ move_name }}</a>
+  {{/each}}
+</template>
