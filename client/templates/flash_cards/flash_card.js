@@ -1,15 +1,43 @@
-var playVideo = function(start, end) {
-  var video = $(".flash-card_video")[0];
+Template.flashCard.onRendered(function() {
+  var self = this;
+  var tag = document.createElement('script');
 
-  video.currentTime = start;
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  var millisecondsToWait = (end - start) * 1000;
+  onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('player', {
+      height: '390',
+      width: '640',
+      videoId: self.data.video_path,
+      playerVars: {
+        controls: 0,
+        showinfo: 0,
+      },
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  };
 
-  video.play();
-  Meteor.setTimeout(function() {
-    video.pause();
-  }, millisecondsToWait);
-};
+  var player;
+
+  playVideo = function(start, end) {
+    player.seekTo(start);
+    player.playVideo();
+    setTimeout(stopVideo, (end - start) * 1000);
+  };
+
+  stopVideo = function() {
+    player.stopVideo();
+  };
+
+  onPlayerReady = function(event) {
+    playVideo(0, 8);
+  };
+});
+
 
 var showNextCard = function(event, template) {
   $(".flash-card_answer").hide();
