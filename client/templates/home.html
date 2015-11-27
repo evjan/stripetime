@@ -1,7 +1,10 @@
 <template name="home">
   <div class="container">
-    {{#with randomCard}}
-      <a href="{{pathFor 'flashCard'}}">Start studying</a>
-    {{/with}}
+    <p>
+      Choose what you want to study:
+    </p>
+    {{#each moves}}
+      <br><a href="{{pathFor 'move'}}">{{title}}</a>
+    {{/each}}
   </div>
 </template>
