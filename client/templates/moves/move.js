@@ -16,7 +16,7 @@ Template.move.onRendered(function() {
 var showQuestion = function() {
   hideAnswerOverlay();
   var flashCard = currentFlashCard();
-  $(".move_question").text(flashCard.question_text || "");
+  $(".move_question").text(flashCard.question_text || "What do you do next?");
 
   if (firstFlashCard) {
     playVideo(flashCard.question_video_start, flashCard.question_video_end, showQuestionOverlay);
