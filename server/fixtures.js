@@ -182,10 +182,77 @@ FlashCards.insert({
 //   title: 'Half guard to closed guard',
 //   video_path: '/videos/Half guard to closed guard.mp4'
 // });
-// Moves.insert({
-//   title: 'Headquarters to near side knee through',
-//   video_path: '/videos/Headquarters to near side knee through.mp4'
-// });
+
+var hqToNearSideKneeThroughId = Moves.insert({
+  title: 'Headquarters to near side knee through',
+  video_path: '/videos/Headquarters to near side knee through.mp4'
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_video_start: 12,
+  question_video_end: 23,
+  answer_video_end: 32
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_text: "Where does your left hand grab?",
+  question_video_start: 23,
+  question_video_end: 32,
+  answer_video_end: 34
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_text: "Why?",
+  question_video_start: 32,
+  question_video_end: 34,
+  answer_video_end: 49
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_text: "What can they do if you don't keep your elbow low?",
+  question_video_start: 34,
+  question_video_end: 49,
+  answer_video_end: 57
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_video_start: 49,
+  question_video_end: 57,
+  answer_video_end: 66
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_video_start: 57,
+  question_video_end: 66,
+  answer_video_end: 79
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_text: "How should you place your left leg?",
+  question_video_start: 57,
+  question_video_end: 79,
+  answer_video_end: 87
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_video_start: 79,
+  question_video_end: 87,
+  answer_video_end: 112
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_text: "What 2 ways can you finish?",
+  question_video_start: 87,
+  question_video_end: 112,
+  answer_video_end: 147
+});
+FlashCards.insert({
+  moveId: hqToNearSideKneeThroughId,
+  question_text: "What's an important detail about your right leg?",
+  question_video_start: 112,
+  question_video_end: 147,
+  answer_video_end: 193
+});
 
 var headquartersToXPassId = Moves.insert({
   title: 'Headquarters to x pass',
