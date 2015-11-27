@@ -3,9 +3,9 @@ BJJ
 
 Todo
 --
-- Playback is wonky when switching between cards, reset the timer when the page loads and disable autoplay
-- Display buttons on top of video
-- "Play again" - what should it do after you've looked at the answer?
+- fix timing on dbl underhooks
+- Not responsive
+- Doesn't work in FF
 
 Nice to haves
 - Re-add admin
