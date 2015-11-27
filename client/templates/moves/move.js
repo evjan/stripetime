@@ -46,9 +46,9 @@ var hideAnswerOverlay = function() {
 };
 
 var playVideo = function(start, end, finishedCallback) {
-  if (firstFlashCard) {
+  // if (firstFlashCard) {
     video.currentTime = start;
-  }
+  // }
 
   video.play();
   setTimeout(function() {
