@@ -16,7 +16,7 @@ Template.move.onRendered(function() {
 var showQuestion = function() {
   hideAnswerOverlay();
   var flashCard = currentFlashCard();
-  $(".move_question").text(flashCard.question_text);
+  $(".move_question").text(flashCard.question_text || "");
 
   if (firstFlashCard) {
     playVideo(flashCard.question_video_start, flashCard.question_video_end, showQuestionOverlay);
@@ -33,6 +33,7 @@ var playAnswer = function() {
   hideQuestion();
 
   var flashCard = currentFlashCard();
+  $(".move_answer").text(flashCard.answer_text || "");
   playVideo(flashCard.question_video_end, flashCard.answer_video_end, showAnswerOverlay);
 };
 

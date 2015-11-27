@@ -20,7 +20,7 @@
   height: 100%;
 }
 
-.move_question {
+.move_answer, .move_question {
   color: #fff;
 }
 
