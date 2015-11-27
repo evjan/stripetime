@@ -3,21 +3,22 @@ FlashCards.remove({});
 
 var doubleUnderhooksId = Moves.insert({
   title: 'Double underhooks pass',
-  video_path: '/videos/Double underhooks pass.mp4'
+  video_path: '/videos/Double underhooks pass.mp4',
+  video_start: 3
 });
 FlashCards.insert({
   moveId: doubleUnderhooksId,
   question_text: "How do you begin?",
   question_video_start: 3,
-  question_video_end: 13,
-  answer_video_end: 17,
+  question_video_end: 12,
+  answer_video_end: 18,
 });
 FlashCards.insert({
   moveId: doubleUnderhooksId,
   question_text: "What do you do with your knees?",
   question_video_start: 13,
   question_video_end: 17,
-  answer_video_end: 22,
+  answer_video_end: 23,
   answer_text: "Keep one knee up at first and then put both to the ground"
 });
 FlashCards.insert({
@@ -25,21 +26,21 @@ FlashCards.insert({
   question_text: "What's another way of entering?",
   question_video_start: 22,
   question_video_end: 25,
-  answer_video_end: 32,
+  answer_video_end: 40,
 });
 FlashCards.insert({
   moveId: doubleUnderhooksId,
   question_text: "How do you enter if they're sitting up?",
-  question_video_start: 32,
-  question_video_end: 44,
-  answer_video_end: 51,
+  question_video_start: 40,
+  question_video_end: 43,
+  answer_video_end: 52,
 });
 FlashCards.insert({
   moveId: doubleUnderhooksId,
   question_text: "What's one of the most important things with this pass?",
   question_video_start: 51,
   question_video_end: 57,
-  answer_video_end: 60,
+  answer_video_end: 61,
   answer_text: "Controlling their hips"
 });
 FlashCards.insert({
@@ -65,7 +66,7 @@ FlashCards.insert({
 });
 FlashCards.insert({
   moveId: doubleUnderhooksId,
-  question_text: "What's the first way of lifting?",
+  question_text: "What's his preferred way of lifting?",
   question_video_start: 113,
   question_video_end: 118,
   answer_video_end: 140,
@@ -116,22 +117,22 @@ FlashCards.insert({
 });
 
 
-Moves.insert({
-  title: 'Guard recovery from toreando knee on belly',
-  video_path: '/videos/Guard recovery from toreando knee on belly.mp4'
-});
-Moves.insert({
-  title: 'Half guard to butterfly guard',
-  video_path: '/videos/Half guard to butterfly guard.mp4'
-});
-Moves.insert({
-  title: 'Half guard to closed guard',
-  video_path: '/videos/Half guard to closed guard.mp4'
-});
-Moves.insert({
-  title: 'Headquarters to near side knee through',
-  video_path: '/videos/Headquarters to near side knee through.mp4'
-});
+// Moves.insert({
+//   title: 'Guard recovery from toreando knee on belly',
+//   video_path: '/videos/Guard recovery from toreando knee on belly.mp4'
+// });
+// Moves.insert({
+//   title: 'Half guard to butterfly guard',
+//   video_path: '/videos/Half guard to butterfly guard.mp4'
+// });
+// Moves.insert({
+//   title: 'Half guard to closed guard',
+//   video_path: '/videos/Half guard to closed guard.mp4'
+// });
+// Moves.insert({
+//   title: 'Headquarters to near side knee through',
+//   video_path: '/videos/Headquarters to near side knee through.mp4'
+// });
 
 var headquartersToXPassId = Moves.insert({
   title: 'Headquarters to x pass',
@@ -169,22 +170,22 @@ FlashCards.insert({
   answer_video_end: 36
 });
 
-Moves.insert({
-  title: 'Knee through pass from headquarters',
-  video_path: '/videos/Knee through pass from headquarters.mp4'
-});
-Moves.insert({
-  title: 'Making posture and dealing with grips in closed guard',
-  video_path: '/videos/Making posture and dealing with grips in closed guard.mp4'
-});
-Moves.insert({
-  title: 'Recovery from over under',
-  video_path: '/videos/Recovery from over under.mp4'
-});
-Moves.insert({
-  title: 'Submissions from closed guard',
-  video_path: '/videos/Submissions from closed guard.mp4'
-});
+// Moves.insert({
+//   title: 'Knee through pass from headquarters',
+//   video_path: '/videos/Knee through pass from headquarters.mp4'
+// });
+// Moves.insert({
+//   title: 'Making posture and dealing with grips in closed guard',
+//   video_path: '/videos/Making posture and dealing with grips in closed guard.mp4'
+// });
+// Moves.insert({
+//   title: 'Recovery from over under',
+//   video_path: '/videos/Recovery from over under.mp4'
+// });
+// Moves.insert({
+//   title: 'Submissions from closed guard',
+//   video_path: '/videos/Submissions from closed guard.mp4'
+// });
 
 var toreandoToKneeOnBellyId = Moves.insert({
   title: 'Toreando pass to knee on belly',
@@ -213,10 +214,10 @@ FlashCards.insert({
   answer_text: "Stabilise and keep the other leg out so she can't grab it"
 });
 
-Moves.insert({
-  title: 'Toreando pass with shoulder pressure',
-  video_path: '/videos/Toreando pass with shoulder pressure.mp4'
-});
+// Moves.insert({
+//   title: 'Toreando pass with shoulder pressure',
+//   video_path: '/videos/Toreando pass with shoulder pressure.mp4'
+// });
 
 if (FlashCards.find().count() === 0) {
 
