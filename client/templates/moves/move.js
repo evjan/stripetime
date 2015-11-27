@@ -9,18 +9,19 @@ Template.move.onRendered(function() {
     moveId: this.data._id
   }).fetch();
 
-  var flashCard = currentFlashCard();
-  playQuestion(flashCard.question_video_start, flashCard.question_video_end);
-  $(".move_question").text(flashCard.question_text);
+  playQuestion();
 });
 
-var playQuestion = function(start, end) {
-  video.currentTime = start;
+var playQuestion = function() {
+  var flashCard = currentFlashCard();
+  $(".move_question").text(flashCard.question_text);
+
+  video.currentTime = flashCard.question_video_start;
   video.play();
   setTimeout(function() {
     video.pause();
     $(".move_video-overlay-question").show();
-  }, (end - start) * 1000);
+  }, (flashCard.question_video_end - flashCard.question_video_start) * 1000);
 };
 
 var playAnswer = function(start, end) {
