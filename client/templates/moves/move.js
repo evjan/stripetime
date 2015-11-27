@@ -1,7 +1,9 @@
 var flashCards;
+var video;
 
 Template.move.onRendered(function() {
-  var video = document.getElementById("video");
+  video = $(".move_video")[0];
+  video.muted = true;
 
   flashCards = FlashCards.find({
     moveId: this.data._id
@@ -9,6 +11,7 @@ Template.move.onRendered(function() {
 
   var flashCard = currentFlashCard();
   playVideo(flashCard.question_video_start, flashCard.question_video_end);
+  $(".move_question").text(this.data.question_text || "What do you do next?");
 });
 
 var playVideo = function(start, end) {
@@ -16,6 +19,7 @@ var playVideo = function(start, end) {
   video.play();
   setTimeout(function(){
     video.pause();
+    $(".move_video-overlay-question").show();
   }, (end - start) * 1000);
 };
 
