@@ -1,9 +1,10 @@
 var flashCards;
 var video;
+var firstFlashCard = true;
 
 Template.move.onRendered(function() {
   video = $(".move_video")[0];
-  video.muted = true;
+  // video.muted = true;
 
   flashCards = FlashCards.find({
     moveId: this.data._id
@@ -17,7 +18,11 @@ var showQuestion = function() {
   var flashCard = currentFlashCard();
   $(".move_question").text(flashCard.question_text);
 
-  playVideo(flashCard.question_video_start, flashCard.question_video_end, showQuestionOverlay);
+  if (firstFlashCard) {
+    playVideo(flashCard.question_video_start, flashCard.question_video_end, showQuestionOverlay);
+  } else {
+    showQuestionOverlay();
+  }
 };
 
 var showQuestionOverlay = function() {
@@ -40,7 +45,10 @@ var hideAnswerOverlay = function() {
 };
 
 var playVideo = function(start, end, finishedCallback) {
-  video.currentTime = start;
+  if (firstFlashCard) {
+    video.currentTime = start;
+  }
+
   video.play();
   setTimeout(function() {
     video.pause();
@@ -62,6 +70,7 @@ var currentFlashCard = function() {
 
 var showNextQuestion = function() {
   flashCards.shift();
+  firstFlashCard = false;
 
   if (flashCards.length > 0) {
     showQuestion();
