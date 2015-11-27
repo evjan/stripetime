@@ -117,10 +117,63 @@ FlashCards.insert({
 });
 
 
-// Moves.insert({
-//   title: 'Guard recovery from toreando knee on belly',
-//   video_path: '/videos/Guard recovery from toreando knee on belly.mp4'
-// });
+var guardRecoveryFromToreandoKneeOnBellyId = Moves.insert({
+  title: 'Guard recovery from toreando knee on belly',
+  video_path: '/videos/Guard recovery from toreando knee on belly.mp4'
+});
+FlashCards.insert({
+  moveId: guardRecoveryFromToreandoKneeOnBellyId,
+  question_text: "What do you do first?",
+  question_video_start: 11,
+  question_video_end: 14,
+  answer_video_end: 19,
+  answer_text: "Block the shoulder"
+});
+FlashCards.insert({
+  moveId: guardRecoveryFromToreandoKneeOnBellyId,
+  question_video_start: 14,
+  question_video_end: 19,
+  answer_video_end: 28,
+  answer_text: "Hip away"
+});
+FlashCards.insert({
+  moveId: guardRecoveryFromToreandoKneeOnBellyId,
+  question_video_start: 19,
+  question_video_end: 28,
+  answer_video_end: 34,
+  answer_text: "The top leg comes in and you lift your hips to recover"
+});
+FlashCards.insert({
+  moveId: guardRecoveryFromToreandoKneeOnBellyId,
+  question_text: "Where can the top foot go?",
+  question_video_start: 43,
+  question_video_end: 46,
+  answer_video_end: 51,
+  answer_text: "The shoulder or the hip"
+});
+FlashCards.insert({
+  moveId: guardRecoveryFromToreandoKneeOnBellyId,
+  question_text: "How do you begin dealing with the knee on belly?",
+  question_video_start: 54,
+  question_video_end: 60,
+  answer_video_end: 62,
+  answer_text: "Block their hips"
+});
+FlashCards.insert({
+  moveId: guardRecoveryFromToreandoKneeOnBellyId,
+  question_text: "What do you do after blocking their hips?",
+  question_video_start: 60,
+  question_video_end: 62,
+  answer_video_end: 67
+});
+FlashCards.insert({
+  moveId: guardRecoveryFromToreandoKneeOnBellyId,
+  question_text: "What does he not want to see?",
+  question_video_start: 67,
+  question_video_end: 69,
+  answer_video_end: 82
+});
+
 // Moves.insert({
 //   title: 'Half guard to butterfly guard',
 //   video_path: '/videos/Half guard to butterfly guard.mp4'
