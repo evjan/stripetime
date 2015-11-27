@@ -11,7 +11,7 @@ Template.move.onRendered(function() {
 
   var flashCard = currentFlashCard();
   playQuestion(flashCard.question_video_start, flashCard.question_video_end);
-  $(".move_question").text(this.data.question_text || "What do you do next?");
+  $(".move_question").text(flashCard.question_text);
 });
 
 var playQuestion = function(start, end) {
