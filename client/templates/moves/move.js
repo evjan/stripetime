@@ -9,27 +9,37 @@ Template.move.onRendered(function() {
     moveId: this.data._id
   }).fetch();
 
-  playQuestion();
+  showQuestion();
 });
 
-var playQuestion = function() {
+var showQuestion = function() {
   var flashCard = currentFlashCard();
   $(".move_question").text(flashCard.question_text);
 
-  video.currentTime = flashCard.question_video_start;
-  video.play();
-  setTimeout(function() {
-    video.pause();
-    $(".move_video-overlay-question").show();
-  }, (flashCard.question_video_end - flashCard.question_video_start) * 1000);
+  playVideo(flashCard.question_video_end, flashCard.answer_video_end, showQuestionOverlay);
 };
 
-var playAnswer = function(start, end) {
+var showQuestionOverlay = function() {
+  $(".move_video-overlay-question").show();
+};
+
+var playAnswer = function() {
+  hideQuestion();
+
+  var flashCard = currentFlashCard();
+  playVideo(flashCard.question_video_end, flashCard.answer_video_end, showAnswerOverlay);
+};
+
+var showAnswerOverlay = function() {
+  $(".move_video-overlay-answer").show();
+};
+
+var playVideo = function(start, end, finishedCallback) {
   video.currentTime = start;
   video.play();
   setTimeout(function() {
     video.pause();
-    $(".move_video-overlay-answer").show();
+    finishedCallback();
   }, (end - start) * 1000);
 };
 
@@ -38,8 +48,7 @@ var hideQuestion = function() {
 };
 
 var showAnswer = function() {
-  hideQuestion();
-  playAnswer(currentFlashCard().question_video_end, currentFlashCard().answer_video_end);
+  playAnswer();
 };
 
 var currentFlashCard = function() {
