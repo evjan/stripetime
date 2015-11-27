@@ -3,6 +3,7 @@ var video;
 
 Template.move.onRendered(function() {
   video = $(".move_video")[0];
+  video.muted = true;
 
   flashCards = FlashCards.find({
     moveId: this.data._id
@@ -70,7 +71,8 @@ var showNextQuestion = function() {
 };
 
 var showYoureDone = function() {
-  $("move_video-overlay-done").show();
+  hideAnswerOverlay();
+  $(".move_video-overlay-done").show();
 };
 
 Template.move.events({
