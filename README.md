@@ -3,7 +3,6 @@ BJJ
 
 Todo
 --
-- check timings in guardRecoveryFromToreandoKneeOnBellyId
 - check timings in hqToNearSideKneeThroughId
 - check timings in headquartersToXPassId
 - check timings in toreandoToKneeOnBellyId
