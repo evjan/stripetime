@@ -499,8 +499,8 @@ FlashCards.insert({
 FlashCards.insert({
   moveId: kneeThroughFromHQId,
   question_text: "How do you finish the pass?",
-  question_video_start: 138,
-  question_video_end: 153,
+  question_video_start: 153,
+  question_video_end: 177,
   answer_video_end: 191,
   answer_text: "Put forward pressure on the upper body and put the knee down"
 });
