@@ -4,6 +4,17 @@ BJJ
 Todo
 --
 - fix timing on dbl underhooks
+- check timings in guardRecoveryFromToreandoKneeOnBellyId
+- check timings in hqToNearSideKneeThroughId
+- check timings in headquartersToXPassId
+- check timings in toreandoToKneeOnBellyId
+- add Half guard to butterfly guard
+- add Half guard to closed guard
+- add Knee through pass from headquarters
+- add Making posture and dealing with grips in closed guard
+- add Recovery from over under
+- add Submissions from closed guard
+- add Toreando pass with shoulder pressure
 - Not responsive
 - Doesn't work in FF
 
