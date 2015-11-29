@@ -197,13 +197,13 @@ FlashCards.insert({
   moveId: hqToNearSideKneeThroughId,
   question_text: "Where does your left hand grab?",
   question_video_start: 23,
-  question_video_end: 32,
+  question_video_end: 33,
   answer_video_end: 34
 });
 FlashCards.insert({
   moveId: hqToNearSideKneeThroughId,
   question_text: "Why?",
-  question_video_start: 32,
+  question_video_start: 33,
   question_video_end: 34,
   answer_video_end: 49
 });
@@ -218,12 +218,12 @@ FlashCards.insert({
   moveId: hqToNearSideKneeThroughId,
   question_video_start: 49,
   question_video_end: 57,
-  answer_video_end: 66
+  answer_video_end: 67
 });
 FlashCards.insert({
   moveId: hqToNearSideKneeThroughId,
   question_video_start: 57,
-  question_video_end: 66,
+  question_video_end: 67,
   answer_video_end: 79
 });
 FlashCards.insert({
