@@ -3,7 +3,6 @@ BJJ
 
 Todo
 --
-- check timings in headquartersToXPassId
 - check timings in toreandoToKneeOnBellyId
 - when switching between moves, it doesn't play from the beginning
 - add Half guard to butterfly guard
