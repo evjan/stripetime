@@ -323,13 +323,13 @@ FlashCards.insert({
   question_text: "What do you do when you get blocked?",
   question_video_start: 7,
   question_video_end: 13,
-  answer_video_end: 22
+  answer_video_end: 21
 });
 FlashCards.insert({
   moveId: toreandoToKneeOnBellyId,
   question_text: "What do you do once you have the knee on belly?",
   question_video_start: 16,
-  question_video_end: 22,
+  question_video_end: 21,
   answer_video_end: 26,
   answer_text: "Stabilise and keep the other leg out so she can't grab it"
 });
