@@ -9,6 +9,10 @@ Template.move.onRendered(function() {
 
   flashCards = FlashCards.find({
     moveId: this.data._id
+  }, {
+    sort: {
+      question_video_start: 1
+    }
   }).fetch();
 
   showQuestion();
@@ -48,7 +52,7 @@ var hideAnswerOverlay = function() {
 
 var playVideo = function(start, end, finishedCallback) {
   // if (firstFlashCard) {
-    video.currentTime = start;
+  video.currentTime = start;
   // }
 
   video.play();

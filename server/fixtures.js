@@ -174,10 +174,83 @@ FlashCards.insert({
   answer_video_end: 82
 });
 
-// Moves.insert({
-//   title: 'Half guard to butterfly guard',
-//   video_path: '/videos/Half guard to butterfly guard.mp4'
-// });
+var halfGuardToButterflyId = Moves.insert({
+  title: 'Half guard to butterfly guard',
+  video_path: '/videos/Half guard to butterfly guard.mp4'
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "When would you use this instead of the half guard to closed guard escape?",
+  question_video_start: 0,
+  question_video_end: 11,
+  answer_video_end: 20,
+  answer_text: "Their grip is so tight that you can't get your arms under their head"
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "How do you begin?",
+  question_video_start: 11,
+  question_video_end: 20,
+  answer_video_end: 25,
+  answer_text: "Your right foot traps the leg and the left foot goes on the mat"
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "What does your right hand do?",
+  question_video_start: 20,
+  question_video_end: 26,
+  answer_video_end: 29,
+  answer_text: "Block their hip"
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "How do you begin inserting the butterfly?",
+  question_video_start: 26,
+  question_video_end: 29,
+  answer_video_end: 40,
+  answer_text: "Hip escape, get onto your right side and get a hook"
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "What happens if you start lifting them from here?",
+  question_video_start: 29,
+  question_video_end: 40,
+  answer_video_end: 46,
+  answer_text: "They will pass"
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "How should you do instead?",
+  question_video_start: 40,
+  question_video_end: 46,
+  answer_video_end: 54,
+  answer_text: "Square your hips back up"
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "How do you lift them now?",
+  question_video_start: 46,
+  question_video_end: 54,
+  answer_video_end: 71,
+  answer_text: "Grab on the back with your left hand, right hand on their hip and bring your knees towards your head"
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "How do you get the last hook in?",
+  question_video_start: 54,
+  question_video_end: 71,
+  answer_video_end: 77,
+});
+FlashCards.insert({
+  moveId: halfGuardToButterflyId,
+  question_text: "How do you finish?",
+  question_video_start: 71,
+  question_video_end: 77,
+  answer_video_end: 81,
+  answer_text: "Sit up and sweep"
+});
+
+
 // Moves.insert({
 //   title: 'Half guard to closed guard',
 //   video_path: '/videos/Half guard to closed guard.mp4'
