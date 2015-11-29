@@ -1,5 +1,7 @@
-BJJ
+StripeTime
 ===
+
+A tool for breaking down instructional videos into flash cards to make it easier to study. I use it for Brazilian Jiu-Jitsu, hence the name (you get stripes and/or new belts at gradings).
 
 Todo
 --
