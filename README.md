@@ -3,10 +3,9 @@ BJJ
 
 Todo
 --
-- add Making posture and dealing with grips in closed guard
 - add Recovery from over under
-- add Submissions from closed guard
 - add Toreando pass with shoulder pressure
+- add Submissions from closed guard
 - Not responsive
 - Doesn't work in FF
 

@@ -513,10 +513,58 @@ FlashCards.insert({
   answer_text: "You don't control their hips as well"
 });
 
-// Moves.insert({
-//   title: 'Making posture and dealing with grips in closed guard',
-//   video_path: '/videos/Making posture and dealing with grips in closed guard.mp4'
-// });
+var makingPostureId = Moves.insert({
+  title: 'Making posture and dealing with grips in closed guard',
+  video_path: '/videos/Making posture and dealing with grips in closed guard.mp4'
+});
+FlashCards.insert({
+  moveId: makingPostureId,
+  question_text: "How do you deal with a collar grip if you have posture?",
+  question_video_start: 20,
+  question_video_end: 26,
+  answer_video_end: 39,
+  answer_text: "Use both hands to break the grip while you posture up, then keep holding their sleeve"
+});
+FlashCards.insert({
+  moveId: makingPostureId,
+  question_text: "How do you deal with a collar grip if it is deep and you can't break the grip, but their arm is still straight?",
+  question_video_start: 26,
+  question_video_end: 39,
+  answer_video_end: 80,
+  answer_text: "Lock their arm and put your elbow on their hip. Roll the head under the arm and then you can choose to break the grip."
+});
+FlashCards.insert({
+  moveId: makingPostureId,
+  question_text: "What's the one thing you shouldn't do when your posture is broken down?",
+  question_video_start: 38,
+  question_video_end: 80,
+  answer_video_end: 90,
+  answer_text: "Turn the other way to expose your neck for a choke"
+});
+FlashCards.insert({
+  moveId: makingPostureId,
+  question_text: "How do you deal with the collar grip when your posture is broken down?",
+  question_video_start: 80,
+  question_video_end: 90,
+  answer_video_end: 129,
+  answer_text: "Keep the head down until you can block the opposite arm. Reach for the collar and stand up and make them release your collar by applying pressure."
+});
+FlashCards.insert({
+  moveId: makingPostureId,
+  question_text: "What if they have your head?",
+  question_video_start: 90,
+  question_video_end: 129,
+  answer_video_end: 142,
+  answer_text: "Put both hands in and posture up"
+});
+FlashCards.insert({
+  moveId: makingPostureId,
+  question_text: "What if they have an overhook?",
+  question_video_start: 129,
+  question_video_end: 142,
+  answer_video_end: 183,
+  answer_text: "Put your head underneath their shin, stand up and pressure forward. Block their hips with your legs and pull the arm out quickly"
+});
 // Moves.insert({
 //   title: 'Recovery from over under',
 //   video_path: '/videos/Recovery from over under.mp4'
