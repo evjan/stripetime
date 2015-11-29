@@ -3,7 +3,6 @@ BJJ
 
 Todo
 --
-- fix timing on dbl underhooks
 - check timings in guardRecoveryFromToreandoKneeOnBellyId
 - check timings in hqToNearSideKneeThroughId
 - check timings in headquartersToXPassId

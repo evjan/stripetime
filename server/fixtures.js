@@ -94,12 +94,12 @@ FlashCards.insert({
   question_text: "How does he like to reach?",
   question_video_start: 194,
   question_video_end: 212,
-  answer_video_end: 220,
+  answer_video_end: 221,
 });
 FlashCards.insert({
   moveId: doubleUnderhooksId,
   question_video_start: 212,
-  question_video_end: 220,
+  question_video_end: 221,
   answer_video_end: 233,
 });
 FlashCards.insert({
