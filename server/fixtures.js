@@ -674,6 +674,4 @@ Meteor.startup(function(){
         answer_video_end: 86,
         answer_text: "Head goes down, underhook and walk back to flatten them out"
     });
-
-
 });
