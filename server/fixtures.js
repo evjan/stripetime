@@ -420,10 +420,99 @@ FlashCards.insert({
   answer_video_end: 36
 });
 
-// Moves.insert({
-//   title: 'Knee through pass from headquarters',
-//   video_path: '/videos/Knee through pass from headquarters.mp4'
-// });
+var kneeThroughFromHQId = Moves.insert({
+  title: 'Knee through pass from headquarters',
+  video_path: '/videos/Knee through pass from headquarters.mp4'
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "What is headquarters?",
+  question_video_start: 3,
+  question_video_end: 11,
+  answer_video_end: 50,
+  answer_text: "You've got one leg trapped and you're holding the lapel"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "How do you set your grips?",
+  question_video_start: 11,
+  question_video_end: 50,
+  answer_video_end: 58,
+  answer_text: "Hold the collar and the outside of the knee"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "Why is it important to hold the outside first?",
+  question_video_start: 50,
+  question_video_end: 58,
+  answer_video_end: 75,
+  answer_text: "They can recover guard"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "How should you position your body?",
+  question_video_start: 58,
+  question_video_end: 75,
+  answer_video_end: 100,
+  answer_text: "Pulling backwards and keeping your elbow tight"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "How do you begin the pass?",
+  question_video_start: 75,
+  question_video_end: 100,
+  answer_video_end: 111,
+  answer_text: "Shift the grip to the inside of the knee and the right hand goes to their hip"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "How do you get the knee across?",
+  question_video_start: 100,
+  question_video_end: 111,
+  answer_video_end: 132,
+  answer_text: "Move your body across and drop the knee next to their hip"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "Why should the left leg be positioned like this?",
+  question_video_start: 111,
+  question_video_end: 132,
+  answer_video_end: 138,
+  answer_text: "If it's too close to their arms, they can sweep you"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "What do you do after putting the knee down?",
+  question_video_start: 131,
+  question_video_end: 138,
+  answer_video_end: 153,
+  answer_text: "Crossface by grabbing under their armpit and pull in"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "What happens if you try to slide the knee straight away?",
+  question_video_start: 138,
+  question_video_end: 153,
+  answer_video_end: 177,
+  answer_text: "They'll hip escape and recover their guard. You need to have upper body control first."
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "How do you finish the pass?",
+  question_video_start: 138,
+  question_video_end: 153,
+  answer_video_end: 191,
+  answer_text: "Put forward pressure on the upper body and put the knee down"
+});
+FlashCards.insert({
+  moveId: kneeThroughFromHQId,
+  question_text: "Why shouldn't you think of this as a slide away?",
+  question_video_start: 153,
+  question_video_end: 191,
+  answer_video_end: 220,
+  answer_text: "You don't control their hips as well"
+});
+
 // Moves.insert({
 //   title: 'Making posture and dealing with grips in closed guard',
 //   video_path: '/videos/Making posture and dealing with grips in closed guard.mp4'
