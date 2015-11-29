@@ -415,7 +415,7 @@ FlashCards.insert({
 FlashCards.insert({
   moveId: headquartersToXPassId,
   question_text: "What's the next step?",
-  question_video_start: 22,
+  question_video_start: 23,
   question_video_end: 31,
   answer_video_end: 36
 });
@@ -660,7 +660,7 @@ FlashCards.insert({
 FlashCards.insert({
   moveId: toreandoWithShoulderPressureId,
   question_text: "Why do you walk into their legs?",
-  question_video_start: 41,
+  question_video_start: 43,
   question_video_end: 73,
   answer_video_end: 75,
   answer_text: "To kill their hips"
@@ -668,7 +668,7 @@ FlashCards.insert({
 FlashCards.insert({
   moveId: toreandoWithShoulderPressureId,
   question_text: "How do you finish the pass?",
-  question_video_start: 72,
+  question_video_start: 73,
   question_video_end: 75,
   answer_video_end: 86,
   answer_text: "Head goes down, underhook and walk back to flatten them out"
