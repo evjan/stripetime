@@ -251,10 +251,67 @@ FlashCards.insert({
 });
 
 
-// Moves.insert({
-//   title: 'Half guard to closed guard',
-//   video_path: '/videos/Half guard to closed guard.mp4'
-// });
+var halfGuardToClosedId = Moves.insert({
+  title: 'Half guard to closed guard',
+  video_path: '/videos/Half guard to closed guard.mp4'
+});
+FlashCards.insert({
+  moveId: halfGuardToClosedId,
+  question_text: "What's the first thing you should do?",
+  question_video_start: 20,
+  question_video_end: 23,
+  answer_video_end: 34,
+  answer_text: "Alleviate the pressure by pulling their shoulder down"
+});
+FlashCards.insert({
+  moveId: halfGuardToClosedId,
+  question_text: "How do you insert the arm under their chin?",
+  question_video_start: 23,
+  question_video_end: 34,
+  answer_video_end: 58,
+  answer_text: "Use your outer leg to hip escape and insert the arm"
+});
+FlashCards.insert({
+  moveId: halfGuardToClosedId,
+  question_text: "What do you do after inserting the first arm?",
+  question_video_start: 34,
+  question_video_end: 58,
+  answer_video_end: 62,
+  answer_text: "Hip out again and bring both arms in"
+});
+FlashCards.insert({
+  moveId: halfGuardToClosedId,
+  question_text: "How do you continue from here?",
+  question_video_start: 58,
+  question_video_end: 62,
+  answer_video_end: 76,
+  answer_text: "Hip out again while trapping them with your bottom leg and insert the knee shield"
+});
+FlashCards.insert({
+  moveId: halfGuardToClosedId,
+  question_text: "How should your left arm be positioned?",
+  question_video_start: 62,
+  question_video_end: 76,
+  answer_video_end: 84,
+  answer_text: "Underneath the knee shield to support it"
+});
+FlashCards.insert({
+  moveId: halfGuardToClosedId,
+  question_text: "How do you set your grips now?",
+  question_video_start: 76,
+  question_video_end: 84,
+  answer_video_end: 93,
+  answer_text: "Left hand on the collar, right hand on their sleeve"
+});
+FlashCards.insert({
+  moveId: halfGuardToClosedId,
+  question_text: "How do you get to the closed guard from here?",
+  question_video_start: 84,
+  question_video_end: 93,
+  answer_video_end: 106,
+  answer_text: "Maintain space, right foot on their hip, lift your hips and square up and close the guard"
+});
+
 
 var hqToNearSideKneeThroughId = Moves.insert({
   title: 'Headquarters to near side knee through',

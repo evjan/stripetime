@@ -3,7 +3,6 @@ BJJ
 
 Todo
 --
-- add Half guard to closed guard
 - add Knee through pass from headquarters
 - add Making posture and dealing with grips in closed guard
 - add Recovery from over under
