@@ -621,7 +621,55 @@ FlashCards.insert({
   answer_text: "Stabilise and keep the other leg out so she can't grab it"
 });
 
-// Moves.insert({
-//   title: 'Toreando pass with shoulder pressure',
-//   video_path: '/videos/Toreando pass with shoulder pressure.mp4'
-// });
+var toreandoWithShoulderPressureId = Moves.insert({
+  title: 'Toreando pass with shoulder pressure',
+  video_path: '/videos/Toreando pass with shoulder pressure.mp4'
+});
+FlashCards.insert({
+  moveId: toreandoWithShoulderPressureId,
+  question_text: "How do you set your grips?",
+  question_video_start: 2,
+  question_video_end: 7,
+  answer_video_end: 13,
+  answer_text: "One hand on the inside of the knee, the other one on the hip"
+});
+FlashCards.insert({
+  moveId: toreandoWithShoulderPressureId,
+  question_text: "How do you begin the pass?",
+  question_video_start: 7,
+  question_video_end: 13,
+  answer_video_end: 19,
+  answer_text: "Walk to the side"
+});
+FlashCards.insert({
+  moveId: toreandoWithShoulderPressureId,
+  question_text: "What's an important detail about the their far leg?",
+  question_video_start: 13,
+  question_video_end: 19,
+  answer_video_end: 43,
+  answer_text: "You have to track it with your right arm and keep the head close, otherwise they may get the leg in and you won't pass"
+});
+FlashCards.insert({
+  moveId: toreandoWithShoulderPressureId,
+  question_text: "How do you continue the pass?",
+  question_video_start: 19,
+  question_video_end: 43,
+  answer_video_end: 73,
+  answer_text: "Push the knee down, get your shoulder into their stomach and walk into their legs"
+});
+FlashCards.insert({
+  moveId: toreandoWithShoulderPressureId,
+  question_text: "Why do you walk into their legs?",
+  question_video_start: 41,
+  question_video_end: 73,
+  answer_video_end: 75,
+  answer_text: "To kill their hips"
+});
+FlashCards.insert({
+  moveId: toreandoWithShoulderPressureId,
+  question_text: "How do you finish the pass?",
+  question_video_start: 72,
+  question_video_end: 75,
+  answer_video_end: 86,
+  answer_text: "Head goes down, underhook and walk back to flatten them out"
+});
