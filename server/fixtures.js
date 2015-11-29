@@ -565,10 +565,30 @@ FlashCards.insert({
   answer_video_end: 183,
   answer_text: "Put your head underneath their shin, stand up and pressure forward. Block their hips with your legs and pull the arm out quickly"
 });
-// Moves.insert({
-//   title: 'Recovery from over under',
-//   video_path: '/videos/Recovery from over under.mp4'
-// });
+
+
+var recoveryFromOverUnderId = Moves.insert({
+  title: 'Recovery from over under',
+  video_path: '/videos/Recovery from over under.mp4'
+});
+FlashCards.insert({
+  moveId: recoveryFromOverUnderId,
+  question_text: "How do you begin?",
+  question_video_start: 4,
+  question_video_end: 29,
+  answer_video_end: 42,
+  answer_text: "As soon as you feel them lifting the leg and going for the collar, lift your hips to keep the head to head distance"
+});
+FlashCards.insert({
+  moveId: recoveryFromOverUnderId,
+  question_text: "What do you do next?",
+  question_video_start: 29,
+  question_video_end: 42,
+  answer_video_end: 67,
+  answer_text: "Turn onto your side and move your hips away to recover the guard"
+});
+
+
 // Moves.insert({
 //   title: 'Submissions from closed guard',
 //   video_path: '/videos/Submissions from closed guard.mp4'

@@ -3,7 +3,6 @@ BJJ
 
 Todo
 --
-- add Recovery from over under
 - add Toreando pass with shoulder pressure
 - add Submissions from closed guard
 - videos start slower in prod, so first question pauses too early
