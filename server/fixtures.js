@@ -338,7 +338,3 @@ FlashCards.insert({
 //   title: 'Toreando pass with shoulder pressure',
 //   video_path: '/videos/Toreando pass with shoulder pressure.mp4'
 // });
-
-if (FlashCards.find().count() === 0) {
-
-}
