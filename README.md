@@ -3,7 +3,6 @@ BJJ
 
 Todo
 --
-- when switching between moves, it doesn't play from the beginning
 - add Half guard to butterfly guard
 - add Half guard to closed guard
 - add Knee through pass from headquarters

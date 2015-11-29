@@ -1,8 +1,9 @@
 var flashCards;
 var video;
-var firstFlashCard = true;
+var firstFlashCard;
 
 Template.move.onRendered(function() {
+  firstFlashCard = true;
   video = $(".move_video")[0];
   // video.muted = true;
 
