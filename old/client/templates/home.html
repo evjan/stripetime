@@ -1,0 +1,11 @@
+<template name="home">
+  <div class="container">
+    <p>
+      Choose what you want to study
+    </p>
+    <h2>White belt, 2nd stripe</h2>
+    {{#each moves}}
+      <a href="{{pathFor 'move'}}">{{title}}</a><br/>
+    {{/each}}
+  </div>
+</template>

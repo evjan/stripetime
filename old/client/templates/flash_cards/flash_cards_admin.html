@@ -1,0 +1,12 @@
+<template name="flashCardsAdmin">
+  <ul>
+    {{#each flashCards}}
+      <li>
+        <a href="{{pathFor 'flashCardEdit'}}">{{ move_name }}</a>
+      </li>
+    {{/each}}
+  </ul>
+
+  <hr>
+  <a href="{{pathFor 'flashCardNew'}}">Create a new flash card</a>
+</template>
