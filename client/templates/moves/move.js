@@ -5,7 +5,6 @@ var firstFlashCard;
 Template.move.onRendered(function() {
   firstFlashCard = true;
   video = $(".move_video")[0];
-  // video.muted = true;
 
   flashCards = FlashCards.find({
     moveId: this.data._id
