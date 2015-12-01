@@ -27,7 +27,7 @@ if (Meteor.isClient){
         $scope.moves = $meteor.collection(Moves);
     });
 
-    angular.module('stripetime-ng').controller('moveDetailsCtrl', function($scope, $stateParams, $meteor, $document){
+    angular.module('stripetime-ng').controller('moveDetailsCtrl', function($scope, $stateParams, $meteor, $document, $timeout){
 
         $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
 
@@ -54,25 +54,25 @@ if (Meteor.isClient){
 
         $scope.showYoureDone = false;
 
-        var moveInit = function() {
+        function moveInit() {
 
             $scope.firstFlashCard = true;
             $scope.video = $document.find('.move_video');
 
-            // video.muted = true
-
             $scope.video.on('loadeddata', function(event){
+
+                $scope.video[0].muted = true;
                 // wait til the video is loaded
                 showQuestion();
             });
 
         };
 
-        var currentFlashCard = function() {
+        function currentFlashCard() {
             return $scope.flashCards[0];
         };
 
-        var showQuestion = function() {
+        function showQuestion() {
             hideAnswerOverlay();
             var flashCard = currentFlashCard();
 
@@ -107,7 +107,7 @@ if (Meteor.isClient){
             playVideo(flashCard.question_video_end, flashCard.answer_video_end, showAnswerOverlay);
         };
 
-        var playVideo = function(start, end, finishedCallback) {
+        function playVideo(start, end, finishedCallback) {
 
             var $video = $scope.video[0];
 
@@ -116,30 +116,29 @@ if (Meteor.isClient){
 
             $video.play();
 
-            setTimeout(function() {
+            $timeout(function() {
                 $video.pause();
                 finishedCallback();
             }, (end - start) * 1000);
         };
 
-        var showQuestionOverlay = function() {
+        function showQuestionOverlay() {
             $scope.showMoveQuestion = true;
-            $scope.$apply();
         };
 
-        var hideQuestionOverlay = function(){
+        function hideQuestionOverlay(){
             $scope.showMoveQuestion = false;
         }
 
-        var showAnswerOverlay = function() {
+        function showAnswerOverlay() {
             $scope.showMoveAnswer = true;
         };
 
-        var hideAnswerOverlay = function(){
+        function hideAnswerOverlay(){
             $scope.showMoveAnswer = false;
         }
 
-        var showYoureDone = function() {
+        function showYoureDone() {
             hideAnswerOverlay();
             $scope.showYoureDone = true;
         };
