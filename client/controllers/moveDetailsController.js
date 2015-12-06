@@ -27,22 +27,18 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     $scope.showYoureDone = false;
 
     function moveInit() {
-
         $scope.firstFlashCard = true;
         $scope.video = $document.find('.move_video');
 
         $scope.video.on('loadeddata', function(event){
-
-            $scope.video[0].muted = true;
             // wait til the video is loaded
             showQuestion();
         });
-
-    };
+    }
 
     function currentFlashCard() {
         return $scope.flashCards[0];
-    };
+    }
 
     function showQuestion() {
         hideAnswerOverlay();
@@ -55,7 +51,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
         } else {
             showQuestionOverlay();
         }
-    };
+    }
 
     $scope.showNextQuestion = function() {
         $scope.flashCards.shift();
@@ -80,9 +76,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     };
 
     function playVideo(start, end, finishedCallback) {
-
         var $video = $scope.video[0];
-
 
         $video.currentTime = start;
 
@@ -92,11 +86,11 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
             $video.pause();
             finishedCallback();
         }, (end - start) * 1000);
-    };
+    }
 
     function showQuestionOverlay() {
         $scope.showMoveQuestion = true;
-    };
+    }
 
     function hideQuestionOverlay(){
         $scope.showMoveQuestion = false;
@@ -104,7 +98,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
 
     function showAnswerOverlay() {
         $scope.showMoveAnswer = true;
-    };
+    }
 
     function hideAnswerOverlay(){
         $scope.showMoveAnswer = false;
@@ -113,10 +107,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     function showYoureDone() {
         hideAnswerOverlay();
         $scope.showYoureDone = true;
-    };
+    }
 
     moveInit();
-
-
-
 });
