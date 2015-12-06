@@ -1,19 +1,6 @@
 StripeTime
 ===
-
 A tool for breaking down instructional videos into flash cards to make it easier to study. I use it for Brazilian Jiu-Jitsu, hence the name (you get stripes and/or new belts at gradings).
-
-Todo
---
-- add Submissions from closed guard
-- videos start slower in prod, so first question pauses too early
-- Not responsive
-- Doesn't work in FF
-
-Nice to haves
-- Re-add admin
-- Play the video and select the start and end points in admin mode
-- Check if admin
 
 Description
 --
