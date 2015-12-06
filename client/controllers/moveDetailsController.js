@@ -29,7 +29,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     $scope.firstFlashCard = true;
     $scope.video = $document.find('.move_video');
 
-    $scope.video.on('loadeddata', function(event) {
+    $scope.video.one('canplay', function(event){
       // wait til the video is loaded
       showQuestion();
     });
@@ -40,6 +40,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
   }
 
   function showQuestion() {
+
     hideAnswerOverlay();
     var flashCard = currentFlashCard();
 
