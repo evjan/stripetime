@@ -10,7 +10,6 @@
 }
 
 .move_video-overlay {
-  display: none;
   text-align: center;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
