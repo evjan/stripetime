@@ -1,17 +1,17 @@
-angular.module('stripetime-ng').config(function($urlRouterProvider, $stateProvider, $locationProvider){
-    $locationProvider.html5Mode(true);
+angular.module('stripetime-ng').config(function($urlRouterProvider, $stateProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
 
-    $stateProvider
+  $stateProvider
     .state('moves', {
-        url: '/moves',
-        templateUrl: 'client/views/home.html',
-        controller: 'homeCtrl'
+      url: '/moves',
+      templateUrl: 'client/views/home.html',
+      controller: 'homeCtrl'
     })
     .state('moveDetails', {
-        url: '/moves/:moveId',
-        templateUrl: 'client/views/move-detail.html',
-        controller: 'moveDetailsCtrl'
+      url: '/moves/:moveId',
+      templateUrl: 'client/views/move-detail.html',
+      controller: 'moveDetailsCtrl'
     });
 
-    $urlRouterProvider.otherwise('/moves');
+  $urlRouterProvider.otherwise('/moves');
 });
