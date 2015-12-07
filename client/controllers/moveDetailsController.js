@@ -1,17 +1,6 @@
 var stripeTime = angular.module('stripetime-ng');
 stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor, $document, $timeout) {
-
   $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
-
-  $scope.flashCards = $scope.$meteorCollection(function() {
-    return FlashCards.find({
-      moveId: $scope.move._id
-    }, {
-      sort: {
-        question_video_start: 1
-      }
-    });
-  }, false);
 
   $scope.firstFlashCard = false;
 
@@ -30,9 +19,22 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     $scope.video = $document.find('.move_video');
 
     $scope.video.one('canplay', function(event){
+      $scope.flashCards = loadFlashCards();
       // wait til the video is loaded
       showQuestion();
     });
+  }
+
+  function loadFlashCards() {
+    return $scope.$meteorCollection(function() {
+      return FlashCards.find({
+        moveId: $scope.move._id
+      }, {
+        sort: {
+          question_video_start: 1
+        }
+      });
+    }, false);
   }
 
   function currentFlashCard() {
@@ -40,7 +42,6 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
   }
 
   function showQuestion() {
-
     hideAnswerOverlay();
     var flashCard = currentFlashCard();
 
