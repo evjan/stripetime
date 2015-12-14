@@ -3,7 +3,7 @@ FlashCards.remove({});
 
 var doubleUnderhooksId = Moves.insert({
   title: 'Double underhooks pass',
-  video_path: '/videos/Double underhooks pass.mp4',
+  video_id: 'xDe2pUDlTx8',
   video_start: 3
 });
 FlashCards.insert({
@@ -119,7 +119,7 @@ FlashCards.insert({
 
 var guardRecoveryFromToreandoKneeOnBellyId = Moves.insert({
   title: 'Guard recovery from toreando knee on belly',
-  video_path: '/videos/Guard recovery from toreando knee on belly.mp4'
+  video_id: 'vImvnDFX1y8'
 });
 FlashCards.insert({
   moveId: guardRecoveryFromToreandoKneeOnBellyId,
@@ -176,7 +176,7 @@ FlashCards.insert({
 
 var halfGuardToButterflyId = Moves.insert({
   title: 'Half guard to butterfly guard',
-  video_path: '/videos/Half guard to butterfly guard.mp4'
+  video_id: 'rg6clVjzT5U'
 });
 FlashCards.insert({
   moveId: halfGuardToButterflyId,
@@ -253,7 +253,7 @@ FlashCards.insert({
 
 var halfGuardToClosedId = Moves.insert({
   title: 'Half guard to closed guard',
-  video_path: '/videos/Half guard to closed guard.mp4'
+  video_id: 'dUIg06rIU4A'
 });
 FlashCards.insert({
   moveId: halfGuardToClosedId,
@@ -315,7 +315,7 @@ FlashCards.insert({
 
 var hqToNearSideKneeThroughId = Moves.insert({
   title: 'Headquarters to near side knee through',
-  video_path: '/videos/Headquarters to near side knee through.mp4'
+  video_id: 'XYZRqqY9Baw'
 });
 FlashCards.insert({
   moveId: hqToNearSideKneeThroughId,
@@ -386,7 +386,7 @@ FlashCards.insert({
 
 var headquartersToXPassId = Moves.insert({
   title: 'Headquarters to x pass',
-  video_path: '/videos/Headquarters to x pass.mp4'
+  video_id: 'lqFNFSIpC9Q'
 });
 
 FlashCards.insert({
@@ -422,7 +422,7 @@ FlashCards.insert({
 
 var kneeThroughFromHQId = Moves.insert({
   title: 'Knee through pass from headquarters',
-  video_path: '/videos/Knee through pass from headquarters.mp4'
+  video_id: 'jaIKWl1jgxU'
 });
 FlashCards.insert({
   moveId: kneeThroughFromHQId,
@@ -515,7 +515,7 @@ FlashCards.insert({
 
 var makingPostureId = Moves.insert({
   title: 'Making posture and dealing with grips in closed guard',
-  video_path: '/videos/Making posture and dealing with grips in closed guard.mp4'
+  video_id: '3iBSThL6BVw'
 });
 FlashCards.insert({
   moveId: makingPostureId,
@@ -569,7 +569,7 @@ FlashCards.insert({
 
 var recoveryFromOverUnderId = Moves.insert({
   title: 'Recovery from over under',
-  video_path: '/videos/Recovery from over under.mp4'
+  video_id: 'h8zt0LrKnW4'
 });
 FlashCards.insert({
   moveId: recoveryFromOverUnderId,
@@ -591,12 +591,12 @@ FlashCards.insert({
 
 // Moves.insert({
 //   title: 'Submissions from closed guard',
-//   video_path: '/videos/Submissions from closed guard.mp4'
+//   video_id: '/videos/Submissions from closed guard.mp4'
 // });
 
 var toreandoToKneeOnBellyId = Moves.insert({
   title: 'Toreando pass to knee on belly',
-  video_path: '/videos/Toreando pass to knee on belly.mp4'
+  video_id: 'XP1m1ONaVJI'
 });
 FlashCards.insert({
   moveId: toreandoToKneeOnBellyId,
@@ -623,7 +623,7 @@ FlashCards.insert({
 
 var toreandoWithShoulderPressureId = Moves.insert({
   title: 'Toreando pass with shoulder pressure',
-  video_path: '/videos/Toreando pass with shoulder pressure.mp4'
+  video_id: 'QjjDWIp_rOg'
 });
 FlashCards.insert({
   moveId: toreandoWithShoulderPressureId,

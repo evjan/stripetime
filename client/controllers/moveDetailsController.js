@@ -15,9 +15,10 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
   $scope.showYoureDone = false;
 
   window.onYouTubeIframeAPIReady = function () {
+    $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
     //noinspection JSUnresolvedFunction,JSUnresolvedVariable
     var player = new YT.Player('player', {
-      videoId: 'xDe2pUDlTx8',
+      videoId: $scope.move.video_id,
       playerVars: {
         controls: 0,
         showinfo: 0
