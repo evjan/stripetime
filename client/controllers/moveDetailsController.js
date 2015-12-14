@@ -1,7 +1,5 @@
 var stripeTime = angular.module('stripetime-ng');
 stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor, $document, $timeout) {
-  $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
-
   $scope.firstFlashCard = false;
 
   $scope.video = {};
@@ -22,17 +20,9 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
       videoId: 'xDe2pUDlTx8',
       events: {
         'onReady': onPlayerReady
-        //'onStateChange': onPlayerStateChange
       }
     });
   };
-
-  //function onPlayerStateChange(event) {
-  //  if (event.data == YT.PlayerState.PLAYING && !done) {
-  //    setTimeout(stopVideo, 6000);
-  //    done = true;
-  //  }
-  //}
 
   // 3. This function creates an <iframe> (and YouTube player)
   //    after the API code downloads.
@@ -51,6 +41,7 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
 
   function moveInit() {
     $scope.firstFlashCard = true;
+    $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
     $scope.flashCards = loadFlashCards();
   }
 
