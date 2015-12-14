@@ -1,4 +1,6 @@
+//noinspection JSUnresolvedFunction
 var stripeTime = angular.module('stripetime-ng');
+
 stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor, $document, $timeout) {
   $scope.firstFlashCard = false;
 
@@ -13,6 +15,7 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
   $scope.showYoureDone = false;
 
   window.onYouTubeIframeAPIReady = function () {
+    //noinspection JSUnresolvedFunction,JSUnresolvedVariable
     var player = new YT.Player('player', {
       videoId: 'xDe2pUDlTx8',
       playerVars: {
@@ -53,7 +56,7 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
     return $scope.flashCards[0];
   }
 
-  function showQuestion(video) {
+  function showQuestion() {
     hideAnswerOverlay();
     var flashCard = currentFlashCard();
 
@@ -89,11 +92,13 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
   };
 
   function playVideo(start, end, finishedCallback) {
+    //noinspection JSUnresolvedFunction
     $scope.video.seekTo(start);
 
     $scope.video.playVideo();
 
     $timeout(function () {
+      //noinspection JSUnresolvedFunction
       $scope.video.pauseVideo();
       finishedCallback();
     }, (end - start) * 1000);
