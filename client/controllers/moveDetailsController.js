@@ -17,6 +17,10 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
       height: '390',
       width: '640',
       videoId: 'xDe2pUDlTx8',
+      playerVars: {
+        controls: 0,
+        showinfo: 0
+      },
       events: {
         'onReady': onPlayerReady
       }
