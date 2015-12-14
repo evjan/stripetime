@@ -14,8 +14,6 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
 
   window.onYouTubeIframeAPIReady = function () {
     var player = new YT.Player('player', {
-      height: '390',
-      width: '640',
       videoId: 'xDe2pUDlTx8',
       playerVars: {
         controls: 0,
