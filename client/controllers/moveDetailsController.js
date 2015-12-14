@@ -1,5 +1,5 @@
 var stripeTime = angular.module('stripetime-ng');
-stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor, $document, $timeout) {
+stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor, $document, $timeout) {
   $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
 
   $scope.firstFlashCard = false;
@@ -14,54 +14,48 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
 
   $scope.showYoureDone = false;
 
-  window.onYouTubeIframeAPIReady = function() {
+  window.onYouTubeIframeAPIReady = function () {
+
     player = new YT.Player('player', {
       height: '390',
       width: '640',
       videoId: 'xDe2pUDlTx8',
       events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
+        'onReady': onPlayerReady
+        //'onStateChange': onPlayerStateChange
       }
     });
-  }
+  };
 
-  function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-      setTimeout(stopVideo, 6000);
-      done = true;
-    }
-  }
+  //function onPlayerStateChange(event) {
+  //  if (event.data == YT.PlayerState.PLAYING && !done) {
+  //    setTimeout(stopVideo, 6000);
+  //    done = true;
+  //  }
+  //}
+
   // 3. This function creates an <iframe> (and YouTube player)
   //    after the API code downloads.
   var player;
 
   // 4. The API will call this function when the video player is ready.
   function onPlayerReady(event) {
-    event.target.playVideo();
+    $scope.video = event.target;
+    showQuestion();
   }
 
   // 5. The API calls this function when the player's state changes.
   //    The function indicates that when playing a video (state=1),
   //    the player should play for six seconds and then stop.
   var done = false;
-  function stopVideo() {
-    player.pauseVideo();
-  }
 
   function moveInit() {
-    //$scope.firstFlashCard = true;
-    //$scope.video = $document.find('.move_video');
-    //
-    //$scope.video.one('canplay', function(event){
-    //  $scope.flashCards = loadFlashCards();
-    //  // wait til the video is loaded
-    //  showQuestion();
-    //});
+    $scope.firstFlashCard = true;
+    $scope.flashCards = loadFlashCards();
   }
 
   function loadFlashCards() {
-    return $scope.$meteorCollection(function() {
+    return $scope.$meteorCollection(function () {
       return FlashCards.find({
         moveId: $scope.move._id
       }, {
@@ -76,7 +70,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     return $scope.flashCards[0];
   }
 
-  function showQuestion() {
+  function showQuestion(video) {
     hideAnswerOverlay();
     var flashCard = currentFlashCard();
 
@@ -89,7 +83,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     }
   }
 
-  $scope.showNextQuestion = function() {
+  $scope.showNextQuestion = function () {
     $scope.flashCards.shift();
 
     $scope.firstFlashCard = false;
@@ -101,7 +95,7 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
     }
   };
 
-  $scope.playAnswer = function() {
+  $scope.playAnswer = function () {
     hideQuestionOverlay();
 
     var flashCard = currentFlashCard();
@@ -112,14 +106,12 @@ stripeTime.controller('moveDetailsCtrl', function($scope, $stateParams, $meteor,
   };
 
   function playVideo(start, end, finishedCallback) {
-    var $video = $scope.video[0];
+    $scope.video.seekTo(start);
 
-    $video.currentTime = start;
+    $scope.video.playVideo();
 
-    $video.play();
-
-    $timeout(function() {
-      $video.pause();
+    $timeout(function () {
+      $scope.video.pauseVideo();
       finishedCallback();
     }, (end - start) * 1000);
   }
