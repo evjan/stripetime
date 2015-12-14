@@ -13,8 +13,7 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
   $scope.showYoureDone = false;
 
   window.onYouTubeIframeAPIReady = function () {
-
-    player = new YT.Player('player', {
+    var player = new YT.Player('player', {
       height: '390',
       width: '640',
       videoId: 'xDe2pUDlTx8',
@@ -24,20 +23,11 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
     });
   };
 
-  // 3. This function creates an <iframe> (and YouTube player)
-  //    after the API code downloads.
-  var player;
-
   // 4. The API will call this function when the video player is ready.
   function onPlayerReady(event) {
     $scope.video = event.target;
     showQuestion();
   }
-
-  // 5. The API calls this function when the player's state changes.
-  //    The function indicates that when playing a video (state=1),
-  //    the player should play for six seconds and then stop.
-  var done = false;
 
   function moveInit() {
     $scope.firstFlashCard = true;
