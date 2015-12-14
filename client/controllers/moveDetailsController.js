@@ -57,7 +57,7 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
   function loadFlashCards() {
     return $scope.$meteorCollection(function () {
       return FlashCards.find({
-        moveId: $scope.move._id
+        moveId: $scope.move.$$id
       }, {
         sort: {
           question_video_start: 1
