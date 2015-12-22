@@ -14,10 +14,19 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
 
   $scope.showYoureDone = false;
 
+  var player;
+
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  debugger;
+
   window.onYouTubeIframeAPIReady = function () {
     $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
     //noinspection JSUnresolvedFunction,JSUnresolvedVariable
-    var player = new YT.Player('player', {
+    player = new YT.Player('player', {
       videoId: $scope.move.video_id,
       playerVars: {
         controls: 0,
@@ -99,9 +108,13 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
     $scope.video.playVideo();
 
     $timeout(function () {
-      //noinspection JSUnresolvedFunction
-      $scope.video.pauseVideo();
-      finishedCallback();
+      try {
+        //noinspection JSUnresolvedFunction
+        player.pauseVideo();
+        finishedCallback();
+      } catch(e) {
+        console.log("Ay: " + e);
+      }
     }, (end - start) * 1000);
   }
 
