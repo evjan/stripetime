@@ -112,7 +112,7 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
         player.pauseVideo();
         finishedCallback();
       } catch(e) {
-        console.log("Ay: " + e);
+        console.log("Error when trying to pause the video: " + e);
       }
     }, (end - start) * 1000);
   }
