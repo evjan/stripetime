@@ -21,7 +21,6 @@ stripeTime.controller('moveDetailsCtrl', function ($scope, $stateParams, $meteor
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  debugger;
 
   window.onYouTubeIframeAPIReady = function () {
     $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
