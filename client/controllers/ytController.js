@@ -1,3 +1,3 @@
-angular.module('stripetime-ng', ['youtube-embed']).controller('ytCtrl', function($scope, $meteor) {
+angular.module('stripetime-ng').controller('ytCtrl', function ($scope) {
   $scope.theBestVideo = 'sMKoNBRZM1M';
 });
