@@ -1,4 +1,5 @@
-if (Moves.find().count() === 0) {
+if (Moves.find().count() !== 0) {
+} else {
   var doubleUnderhooksId = Moves.insert({
     title: 'Double underhooks pass',
     video_id: 'xDe2pUDlTx8',
@@ -9,7 +10,7 @@ if (Moves.find().count() === 0) {
     question_text: "How do you begin?",
     question_video_start: 3,
     question_video_end: 12,
-    answer_video_end: 18,
+    answer_video_end: 18
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
@@ -24,14 +25,14 @@ if (Moves.find().count() === 0) {
     question_text: "What's another way of entering?",
     question_video_start: 22,
     question_video_end: 25,
-    answer_video_end: 40,
+    answer_video_end: 40
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_text: "How do you enter if they're sitting up?",
     question_video_start: 40,
     question_video_end: 43,
-    answer_video_end: 52,
+    answer_video_end: 52
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
@@ -46,72 +47,72 @@ if (Moves.find().count() === 0) {
     question_text: "What happens if you reach for the collar straight away?",
     question_video_start: 71,
     question_video_end: 76,
-    answer_video_end: 85,
+    answer_video_end: 85
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_text: "What should you do instead to prevent that?",
     question_video_start: 76,
     question_video_end: 85,
-    answer_video_end: 110,
+    answer_video_end: 110
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_text: "What's the first way of lifting?",
     question_video_start: 110,
     question_video_end: 113,
-    answer_video_end: 118,
+    answer_video_end: 118
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_text: "What's his preferred way of lifting?",
     question_video_start: 113,
     question_video_end: 118,
-    answer_video_end: 140,
+    answer_video_end: 140
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_video_start: 118,
     question_video_end: 140,
-    answer_video_end: 152,
+    answer_video_end: 152
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_video_start: 152,
     question_video_end: 173,
-    answer_video_end: 194,
+    answer_video_end: 194
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_video_start: 173,
     question_video_end: 194,
-    answer_video_end: 212,
+    answer_video_end: 212
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_text: "How does he like to reach?",
     question_video_start: 194,
     question_video_end: 212,
-    answer_video_end: 221,
+    answer_video_end: 221
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_video_start: 212,
     question_video_end: 221,
-    answer_video_end: 233,
+    answer_video_end: 233
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_video_start: 212,
     question_video_end: 220,
-    answer_video_end: 245,
+    answer_video_end: 245
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
     question_text: "What should your hands do now?",
     question_video_start: 220,
     question_video_end: 245,
-    answer_video_end: 271,
+    answer_video_end: 271
   });
 
 
@@ -237,7 +238,7 @@ if (Moves.find().count() === 0) {
     question_text: "How do you get the last hook in?",
     question_video_start: 54,
     question_video_end: 71,
-    answer_video_end: 77,
+    answer_video_end: 77
   });
   FlashCards.insert({
     moveId: halfGuardToButterflyId,
