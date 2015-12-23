@@ -2,6 +2,11 @@ angular.module('stripetime-ng').config(function($urlRouterProvider, $stateProvid
   $locationProvider.html5Mode(true);
 
   $stateProvider
+    .state('ytEmbed', {
+      url: '/yt',
+      templateUrl: 'client/views/yt.html',
+      controller: 'ytCtrl'
+    })
     .state('moves', {
       url: '/moves',
       templateUrl: 'client/views/home.html',
