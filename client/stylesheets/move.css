@@ -8,7 +8,10 @@
   max-width: 480px;
 }
 .move_video-overlay {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
