@@ -12,6 +12,10 @@ stripeTime.controller('moveDetailsCtrl', ['$scope', '$stateParams', '$meteor', '
 
   $scope.showYoureDone = false;
 
+  $scope.playerVars = {
+    controls: 0,
+    showinfo: 0
+  };
 
   $scope.$on('youtube.player.ready', function ($event, player) {
     $scope.player = player;
@@ -21,7 +25,7 @@ stripeTime.controller('moveDetailsCtrl', ['$scope', '$stateParams', '$meteor', '
   function moveInit() {
     $scope.firstFlashCard = true;
     $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
-    $scope.theBestVideo = $scope.move.video_id;
+    $scope.videoId = $scope.move.video_id;
 
     $scope.flashCards = loadFlashCards();
   }
