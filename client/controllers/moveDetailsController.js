@@ -1,144 +1,119 @@
 //noinspection JSUnresolvedFunction
 var stripeTime = angular.module('stripetime-ng');
 
-stripeTime.controller('moveDetailsCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {
-  //$scope.firstFlashCard = false;
+stripeTime.controller('moveDetailsCtrl', ['$scope', '$stateParams', '$meteor', '$document', '$timeout', function ($scope, $stateParams, $meteor, $document, $timeout) {
+  $scope.firstFlashCard = false;
 
-  //$scope.video = {};
+  $scope.moveQuestionText = '';
+  $scope.showMoveQuestion = false;
 
-  //$scope.moveQuestionText = '';
-  //$scope.showMoveQuestion = false;
+  $scope.moveAnswerText = '';
+  $scope.showMoveAnswer = false;
 
-  //$scope.moveAnswerText = '';
-  //$scope.showMoveAnswer = false;
+  $scope.showYoureDone = false;
 
-  //$scope.showYoureDone = false;
 
-  //var player;
+  $scope.$on('youtube.player.ready', function ($event, player) {
+    $scope.player = player;
+    showQuestion();
+  });
 
-  //$reactive(this).attach($scope);
-
-  //$scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
-  //
-  //debugger;
-
-  //window.onYouTubeIframeAPIReady = function () {
-  //  $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
-  //  //noinspection JSUnresolvedFunction,JSUnresolvedVariable
-  //  player = new YT.Player('player', {
-  //    videoId: $scope.move.video_id,
-  //    playerVars: {
-  //      controls: 0,
-  //      showinfo: 0
-  //    },
-  //    events: {
-  //      'onReady': onPlayerReady
-  //    }
-  //  });
-  //};
-
-  // 4. The API will call this function when the video player is ready.
-  //function onPlayerReady(event) {
-  //  $scope.video = event.target;
-  //  showQuestion();
-  //}
-  //
   function moveInit() {
     $scope.firstFlashCard = true;
     $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
     $scope.theBestVideo = $scope.move.video_id;
 
-    //$scope.flashCards = loadFlashCards();
+    $scope.flashCards = loadFlashCards();
   }
-  //
-  //function loadFlashCards() {
-  //  return $scope.$meteorCollection(function () {
-  //    return FlashCards.find({
-  //      moveId: $scope.move.$$id
-  //    }, {
-  //      sort: {
-  //        question_video_start: 1
-  //      }
-  //    });
-  //  }, false);
-  //}
-  //
-  //function currentFlashCard() {
-  //  return $scope.flashCards[0];
-  //}
-  //
-  //function showQuestion() {
-  //  hideAnswerOverlay();
-  //  var flashCard = currentFlashCard();
-  //
-  //  $scope.moveQuestionText = flashCard.question_text || "What do you do next?";
-  //
-  //  if ($scope.firstFlashCard) {
-  //    playVideo(flashCard.question_video_start, flashCard.question_video_end, showQuestionOverlay);
-  //  } else {
-  //    showQuestionOverlay();
-  //  }
-  //}
-  //
-  //$scope.showNextQuestion = function () {
-  //  $scope.flashCards.shift();
-  //
-  //  $scope.firstFlashCard = false;
-  //
-  //  if ($scope.flashCards.length > 0) {
-  //    showQuestion();
-  //  } else {
-  //    showYoureDone();
-  //  }
-  //};
-  //
-  //$scope.playAnswer = function () {
-  //  hideQuestionOverlay();
-  //
-  //  var flashCard = currentFlashCard();
-  //
-  //  $scope.moveAnswerText = flashCard.answer_text || "";
-  //
-  //  playVideo(flashCard.question_video_end, flashCard.answer_video_end, showAnswerOverlay);
-  //};
-  //
-  //function playVideo(start, end, finishedCallback) {
-  //  //noinspection JSUnresolvedFunction
-  //  $scope.video.seekTo(start);
-  //
-  //  $scope.video.playVideo();
-  //
-  //  $timeout(function () {
-  //    try {
-  //      //noinspection JSUnresolvedFunction
-  //      player.pauseVideo();
-  //      finishedCallback();
-  //    } catch(e) {
-  //      console.log("Error when trying to pause the video: " + e);
-  //    }
-  //  }, (end - start) * 1000);
-  //}
-  //
-  //function showQuestionOverlay() {
-  //  $scope.showMoveQuestion = true;
-  //}
-  //
-  //function hideQuestionOverlay() {
-  //  $scope.showMoveQuestion = false;
-  //}
-  //
-  //function showAnswerOverlay() {
-  //  $scope.showMoveAnswer = true;
-  //}
-  //
-  //function hideAnswerOverlay() {
-  //  $scope.showMoveAnswer = false;
-  //}
-  //
-  //function showYoureDone() {
-  //  hideAnswerOverlay();
-  //  $scope.showYoureDone = true;
-  //}
-  //
+
+  function loadFlashCards() {
+    return $scope.$meteorCollection(function () {
+      return FlashCards.find({
+        moveId: $scope.move.$$id
+      }, {
+        sort: {
+          question_video_start: 1
+        }
+      });
+    }, false);
+  }
+
+  function currentFlashCard() {
+    return $scope.flashCards[0];
+  }
+
+  function showQuestion() {
+    hideAnswerOverlay();
+    var flashCard = currentFlashCard();
+
+    $scope.moveQuestionText = flashCard.question_text || "What do you do next?";
+
+    if ($scope.firstFlashCard) {
+      playVideo(flashCard.question_video_start, flashCard.question_video_end, showQuestionOverlay);
+    } else {
+      showQuestionOverlay();
+    }
+  }
+
+  $scope.showNextQuestion = function () {
+    $scope.flashCards.shift();
+
+    $scope.firstFlashCard = false;
+
+    if ($scope.flashCards.length > 0) {
+      showQuestion();
+    } else {
+      showYoureDone();
+    }
+  };
+
+  $scope.playAnswer = function () {
+    hideQuestionOverlay();
+
+    var flashCard = currentFlashCard();
+
+    $scope.moveAnswerText = flashCard.answer_text || "";
+
+    playVideo(flashCard.question_video_end, flashCard.answer_video_end, showAnswerOverlay);
+  };
+
+  function playVideo(start, end, finishedCallback) {
+    //noinspection JSUnresolvedFunction
+    $scope.player.seekTo(start);
+
+    $scope.player.playVideo();
+
+    $timeout(function () {
+      try {
+        //noinspection JSUnresolvedFunction
+        $scope.player.pauseVideo();
+        finishedCallback();
+      } catch (e) {
+        console.log("Error when trying to pause the video: " + e);
+      }
+    }, (end - start) * 1000);
+  }
+
+  function showQuestionOverlay() {
+    $scope.showMoveQuestion = true;
+  }
+
+  function hideQuestionOverlay() {
+    $scope.showMoveQuestion = false;
+  }
+
+  function showAnswerOverlay() {
+    $scope.showMoveAnswer = true;
+  }
+
+  function hideAnswerOverlay() {
+    $scope.showMoveAnswer = false;
+  }
+
+  function showYoureDone() {
+    hideAnswerOverlay();
+    $scope.showYoureDone = true;
+  }
+
   moveInit();
 }]);
