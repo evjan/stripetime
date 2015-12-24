@@ -1,16 +1,6 @@
 (function () {
-//noinspection JSUnresolvedFunction
+  //noinspection JSUnresolvedFunction
   angular.module('stripetime-ng').controller('moveDetailsCtrl', ['$scope', '$stateParams', '$meteor', '$document', '$timeout', function ($scope, $stateParams, $meteor, $document, $timeout) {
-    $scope.firstFlashCard = false;
-
-    $scope.moveQuestionText = '';
-    $scope.showMoveQuestion = false;
-
-    $scope.moveAnswerText = '';
-    $scope.showMoveAnswer = false;
-
-    $scope.showYoureDone = false;
-
     $scope.playerVars = {
       controls: 0,
       showinfo: 0
@@ -22,6 +12,14 @@
     });
 
     function moveInit() {
+      $scope.moveQuestionText = '';
+      $scope.showMoveQuestion = false;
+
+      $scope.moveAnswerText = '';
+      $scope.showMoveAnswer = false;
+
+      $scope.showYoureDone = false;
+
       $scope.firstFlashCard = true;
       $scope.move = $scope.$meteorObject(Moves, $stateParams.moveId);
       $scope.videoId = $scope.move.video_id;
