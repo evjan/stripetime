@@ -1,4 +1,7 @@
 /* global YT */
+
+//Taken from commit d654e43da6da39e07bdd96a85664993da63a2ac6 in https://github.com/brandly/angular-youtube-embed
+
 angular.module('youtube-embed', ['ng'])
   .service ('youtubeEmbedUtils', ['$window', '$rootScope', function ($window, $rootScope) {
     var Service = {};
