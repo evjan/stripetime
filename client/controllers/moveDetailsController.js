@@ -11,6 +11,10 @@
       showQuestion();
     });
 
+    $scope.$on('youtube.player.playing', function(){
+      pauseVideoAtTheRightTime($scope.finishedCallback, $scope.startTime, $scope.endTime);
+    });
+
     function moveInit() {
       $scope.moveQuestionText = '';
       $scope.showMoveQuestion = false;
@@ -84,10 +88,13 @@
       $scope.player.seekTo(start);
       $scope.player.playVideo();
 
-      pauseVideoAtTheRightTime(finishedCallback, end, start);
+      $scope.startTime = start;
+      $scope.endTime = end;
+      $scope.finishedCallback = finishedCallback;
+
     }
 
-    function pauseVideoAtTheRightTime(finishedCallback, end, start) {
+    function pauseVideoAtTheRightTime(finishedCallback, start, end) {
       $timeout(function () {
         try {
           //noinspection JSUnresolvedFunction
