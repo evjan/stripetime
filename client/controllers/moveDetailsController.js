@@ -80,13 +80,18 @@
 
     function playVideo(start, end, finishedCallback) {
       //noinspection JSUnresolvedFunction
-      $scope.player.seekTo(start);
 
+      $scope.player.seekTo(start);
       $scope.player.playVideo();
 
+      pauseVideoAtTheRightTime(finishedCallback, end, start);
+    }
+
+    function pauseVideoAtTheRightTime(finishedCallback, end, start) {
       $timeout(function () {
         try {
           //noinspection JSUnresolvedFunction
+
           $scope.player.pauseVideo();
           finishedCallback();
         } catch (e) {
