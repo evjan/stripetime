@@ -1,0 +1,13 @@
+<h1>New move</h1>
+
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input class="form-control" ng-model="newMove.title" type="text" id="title"/>
+  </div>
+  <div class="form-group">
+    <label for="video_id">YouTube video ID</label>
+    <input class="form-control" ng-model="newMove.video_id" type="text" id="video_id"/>
+  </div>
+  <button ng-click="save()">Save</button>
+</form>
