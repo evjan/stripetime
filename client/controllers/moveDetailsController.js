@@ -84,8 +84,8 @@
 
     function playVideo(start, end, finishedCallback) {
       //noinspection JSUnresolvedFunction
-
       $scope.player.seekTo(start);
+      //noinspection JSUnresolvedFunction
       $scope.player.playVideo();
 
       $scope.startTime = start;
