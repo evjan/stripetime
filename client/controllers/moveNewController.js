@@ -1,5 +1,5 @@
 (function () {
-  angular.module('stripetime-ng').controller('moveNewCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
+  angular.module('stripetime-ng').controller('moveNewCtrl', ['$scope', function ($scope) {
     $scope.newMove = {};
 
     $scope.save = function() {
