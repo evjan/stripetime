@@ -1,5 +1,5 @@
 (function() {
-  angular.module('stripetime-ng').controller('moveEditCtrl', ['$scope', '$stateParams', '$meteor', '$document', '$timeout', function($scope, $stateParams, $meteor, $document, $timeout) {
+  angular.module('stripetime-ng').controller('moveEditCtrl', ['$scope', '$stateParams', '$location', function($scope, $stateParams, $location) {
     $scope.playerVars = {
       showinfo: 0
     };
@@ -29,7 +29,12 @@
       $scope.newFlashCard = {};
     };
 
-    $scope.delete = function(flashCard) {
+    $scope.deleteMove = function(move) {
+      Moves.remove({_id: move._id});
+      $location.path('/moves/admin');
+    };
+
+    $scope.deleteFlashCard = function(flashCard) {
       FlashCards.remove({_id: flashCard._id});
     }
   }]);

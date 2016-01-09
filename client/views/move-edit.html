@@ -5,6 +5,7 @@
   <h1>
     {{move.title}}
   </h1>
+  <button ng-click="deleteMove(move)">Delete</button>
 
   <youtube-video class="move_video" video-id="videoId" player-vars="playerVars"></youtube-video>
 
@@ -41,7 +42,7 @@
       <label for="question_video_start">Question video start</label>
       <input class="form-control" type="number" id="question_video_start" value="{{flashCard.question_video_start}}"/>
     </div>
-    <button ng-click="delete(flashCard)">Delete</button>
+    <button ng-click="deleteFlashCard(flashCard)">Delete</button>
   </form>
 </div>
 
