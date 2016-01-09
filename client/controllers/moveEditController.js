@@ -28,5 +28,9 @@
       FlashCards.insert($scope.newFlashCard);
       $scope.newFlashCard = {};
     };
+
+    $scope.delete = function(flashCard) {
+      FlashCards.remove({_id: flashCard._id});
+    }
   }]);
 })();
