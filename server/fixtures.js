@@ -1,4 +1,4 @@
-if (Moves.find().count() !== 0) {
+if(Moves.find().count() !== 0) {
 } else {
   var doubleUnderhooksId = Moves.insert({
     title: 'Double underhooks pass',

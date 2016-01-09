@@ -1,17 +1,17 @@
-(function () {
+(function() {
   //noinspection JSUnresolvedFunction
-  angular.module('stripetime-ng').controller('moveDetailsCtrl', ['$scope', '$stateParams', '$meteor', '$document', '$timeout', function ($scope, $stateParams, $meteor, $document, $timeout) {
+  angular.module('stripetime-ng').controller('moveDetailsCtrl', ['$scope', '$stateParams', '$meteor', '$document', '$timeout', function($scope, $stateParams, $meteor, $document, $timeout) {
     $scope.playerVars = {
       controls: 0,
       showinfo: 0
     };
 
-    $scope.$on('youtube.player.ready', function ($event, player) {
+    $scope.$on('youtube.player.ready', function($event, player) {
       $scope.player = player;
       showQuestion();
     });
 
-    $scope.$on('youtube.player.playing', function(){
+    $scope.$on('youtube.player.playing', function() {
       pauseVideoAtTheRightTime($scope.finishedCallback, $scope.startTime, $scope.endTime);
     });
 
@@ -32,7 +32,7 @@
     }
 
     function loadFlashCards() {
-      return $scope.$meteorCollection(function () {
+      return $scope.$meteorCollection(function() {
         return FlashCards.find({
           moveId: $scope.move.$$id
         }, {
@@ -53,26 +53,26 @@
 
       $scope.moveQuestionText = flashCard.question_text || "What do you do next?";
 
-      if ($scope.firstFlashCard) {
+      if($scope.firstFlashCard) {
         playVideo(flashCard.question_video_start, flashCard.question_video_end, showQuestionOverlay);
       } else {
         showQuestionOverlay();
       }
     }
 
-    $scope.showNextQuestion = function () {
+    $scope.showNextQuestion = function() {
       $scope.flashCards.shift();
 
       $scope.firstFlashCard = false;
 
-      if ($scope.flashCards.length > 0) {
+      if($scope.flashCards.length > 0) {
         showQuestion();
       } else {
         showYoureDone();
       }
     };
 
-    $scope.playAnswer = function () {
+    $scope.playAnswer = function() {
       hideQuestionOverlay();
 
       var flashCard = currentFlashCard();
@@ -95,13 +95,13 @@
     }
 
     function pauseVideoAtTheRightTime(finishedCallback, start, end) {
-      $timeout(function () {
+      $timeout(function() {
         try {
           //noinspection JSUnresolvedFunction
 
           $scope.player.pauseVideo();
           finishedCallback();
-        } catch (e) {
+        } catch(e) {
           console.log("Error when trying to pause the video: " + e);
         }
       }, (end - start) * 1000);
