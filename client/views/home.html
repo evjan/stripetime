@@ -3,9 +3,11 @@
     <p>
       Choose what you want to study
     </p>
-    <h2>White belt, 2nd stripe</h2>
-    <ul>
-      <li ng-repeat="move in moves"><a href="/moves/{{move._id}}">{{move.title}}</a></li>
-    </ul>
+    <div ng-repeat="stripe in stripes">
+      <h2>{{stripe.title}}</h2>
+      <ul>
+        <li ng-repeat="move in movesForStripe(stripe)"><a href="/moves/{{move._id}}">{{move.title}}</a></li>
+      </ul>
+    </div>
   </div>
 </div>

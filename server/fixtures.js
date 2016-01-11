@@ -1,9 +1,17 @@
 if(Moves.find().count() !== 0) {
 } else {
+  var white2nd = Stripes.insert({
+    title: 'White 2nd stripe'
+  });
+
+  Stripes.insert({
+    title: 'White 3rd stripe'
+  });
+
   var doubleUnderhooksId = Moves.insert({
     title: 'Double underhooks pass',
     video_id: 'xDe2pUDlTx8',
-    video_start: 3
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: doubleUnderhooksId,
@@ -118,7 +126,8 @@ if(Moves.find().count() !== 0) {
 
   var guardRecoveryFromToreandoKneeOnBellyId = Moves.insert({
     title: 'Guard recovery from toreando knee on belly',
-    video_id: 'vImvnDFX1y8'
+    video_id: 'vImvnDFX1y8',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: guardRecoveryFromToreandoKneeOnBellyId,
@@ -175,7 +184,8 @@ if(Moves.find().count() !== 0) {
 
   var halfGuardToButterflyId = Moves.insert({
     title: 'Half guard to butterfly guard',
-    video_id: 'rg6clVjzT5U'
+    video_id: 'rg6clVjzT5U',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: halfGuardToButterflyId,
@@ -252,7 +262,8 @@ if(Moves.find().count() !== 0) {
 
   var halfGuardToClosedId = Moves.insert({
     title: 'Half guard to closed guard',
-    video_id: 'dUIg06rIU4A'
+    video_id: 'dUIg06rIU4A',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: halfGuardToClosedId,
@@ -314,7 +325,8 @@ if(Moves.find().count() !== 0) {
 
   var hqToNearSideKneeThroughId = Moves.insert({
     title: 'Headquarters to near side knee through',
-    video_id: 'XYZRqqY9Baw'
+    video_id: 'XYZRqqY9Baw',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: hqToNearSideKneeThroughId,
@@ -385,7 +397,8 @@ if(Moves.find().count() !== 0) {
 
   var headquartersToXPassId = Moves.insert({
     title: 'Headquarters to x pass',
-    video_id: 'lqFNFSIpC9Q'
+    video_id: 'lqFNFSIpC9Q',
+    stripe_id: white2nd
   });
 
   FlashCards.insert({
@@ -421,7 +434,8 @@ if(Moves.find().count() !== 0) {
 
   var kneeThroughFromHQId = Moves.insert({
     title: 'Knee through pass from headquarters',
-    video_id: 'jaIKWl1jgxU'
+    video_id: 'jaIKWl1jgxU',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: kneeThroughFromHQId,
@@ -514,7 +528,8 @@ if(Moves.find().count() !== 0) {
 
   var makingPostureId = Moves.insert({
     title: 'Making posture and dealing with grips in closed guard',
-    video_id: '3iBSThL6BVw'
+    video_id: '3iBSThL6BVw',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: makingPostureId,
@@ -568,7 +583,8 @@ if(Moves.find().count() !== 0) {
 
   var recoveryFromOverUnderId = Moves.insert({
     title: 'Recovery from over under',
-    video_id: 'h8zt0LrKnW4'
+    video_id: 'h8zt0LrKnW4',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: recoveryFromOverUnderId,
@@ -595,7 +611,8 @@ if(Moves.find().count() !== 0) {
 
   var toreandoToKneeOnBellyId = Moves.insert({
     title: 'Toreando pass to knee on belly',
-    video_id: 'XP1m1ONaVJI'
+    video_id: 'XP1m1ONaVJI',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: toreandoToKneeOnBellyId,
@@ -622,7 +639,8 @@ if(Moves.find().count() !== 0) {
 
   var toreandoWithShoulderPressureId = Moves.insert({
     title: 'Toreando pass with shoulder pressure',
-    video_id: 'QjjDWIp_rOg'
+    video_id: 'QjjDWIp_rOg',
+    stripe_id: white2nd
   });
   FlashCards.insert({
     moveId: toreandoWithShoulderPressureId,

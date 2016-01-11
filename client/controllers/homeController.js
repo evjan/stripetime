@@ -1,5 +1,18 @@
 (function() {
   angular.module('stripetime-ng').controller('homeCtrl', function($scope, $meteor) {
-    $scope.moves = $meteor.collection(Moves);
+    $scope.stripes = $meteor.collection(Stripes);
+    var moves = $meteor.collection(Moves);
+
+    var groupedMoves;
+
+    $scope.movesForStripe = function(stripe) {
+      if(groupedMoves === undefined) {
+        groupedMoves = _.groupBy(moves, function(m) {
+          return m.stripe_id;
+        });
+      }
+
+      return groupedMoves[stripe._id];
+    };
   });
 })();
