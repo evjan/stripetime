@@ -1,6 +1,9 @@
 <h1>Moves admin</h1>
-<ul>
-  <li ng-repeat="move in moves"><a href="/moves/edit/{{move._id}}">{{move.title}}</a></li>
-</ul>
-
 <a href="/moves/new">Add a new move</a>
+
+<div ng-repeat="stripe in stripes">
+  <h2>{{stripe.title}}</h2>
+  <ul>
+    <li ng-repeat="move in movesForStripe(stripe)"><a href="/moves/edit/{{move._id}}">{{move.title}}</a></li>
+  </ul>
+</div>

@@ -2,6 +2,12 @@
 
 <form>
   <div class="form-group">
+    <label for="stripe">Stripe</label>
+    <select class="form-control" name="stripe" id="stripe" ng-model="newMove.stripe_id">
+      <option ng-repeat="stripe in stripes" value="{{stripe._id}}">{{stripe.title}}</option>
+    </select>
+  </div>
+  <div class="form-group">
     <label for="title">Title</label>
     <input class="form-control" ng-model="newMove.title" type="text" id="title"/>
   </div>
