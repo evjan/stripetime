@@ -39,23 +39,23 @@
   </form>
 </div>
 
-<div ng-repeat="flashCard in flashCards">
-  <form>
-    <div class="form-group">
-      <label for="question_text">Question</label>
-      <input class="form-control" type="text" id="question_text" value="{{flashCard.question_text}}"/>
-    </div>
-    <div class="form-group">
-      <label for="answer_text">Answer</label>
-      <input class="form-control" type="text" id="answer_text" value="{{flashCard.answer_text}}"/>
-    </div>
-    <div class="form-group">
-      <label for="question_video_start">Question video start</label>
-      <input class="form-control" type="number" id="question_video_start" value="{{flashCard.question_video_start}}"/>
-    </div>
-    <button ng-click="deleteFlashCard(flashCard)">Delete</button>
-  </form>
-</div>
-
+<table class="table table-striped">
+  <tr>
+    <th>Q start</th>
+    <th>Q end</th>
+    <th>A end</th>
+    <th>Question</th>
+    <th>Answer</th>
+    <th>Actions</th>
+  </tr>
+  <tr ng-repeat="flashCard in flashCards">
+    <td>{{flashCard.question_video_start}}</td>
+    <td>{{flashCard.question_video_end}}</td>
+    <td>{{flashCard.answer_video_start}}</td>
+    <td>{{flashCard.question_text}}</td>
+    <td>{{flashCard.answer_text}}</td>
+    <td><button ng-click="deleteFlashCard(flashCard)">Delete</button></td>
+  </tr>
+</table>
 
 <script src="https://www.youtube.com/iframe_api"></script>
