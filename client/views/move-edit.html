@@ -5,7 +5,9 @@
   <h1>
     {{move.title}}
   </h1>
-  <button ng-click="deleteMove(move)">Delete</button>
+  <div>
+    <button ng-click="deleteMove(move)">Delete</button>
+  </div>
 
   <youtube-video class="move_video" video-id="videoId" player-vars="playerVars"></youtube-video>
 
@@ -51,7 +53,7 @@
   <tr ng-repeat="flashCard in flashCards">
     <td>{{flashCard.question_video_start}}</td>
     <td>{{flashCard.question_video_end}}</td>
-    <td>{{flashCard.answer_video_start}}</td>
+    <td>{{flashCard.answer_video_end}}</td>
     <td>{{flashCard.question_text}}</td>
     <td>{{flashCard.answer_text}}</td>
     <td><button ng-click="deleteFlashCard(flashCard)">Delete</button></td>
