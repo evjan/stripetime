@@ -14,7 +14,7 @@ angular.module('stripetime-ng').config(function($urlRouterProvider, $stateProvid
     })
     .state('moveNew', {
       url: '/moves/new',
-      templateUrl: 'client/views/move-form.html',
+      templateUrl: 'client/views/move-new.html',
       controller: 'moveNewCtrl'
     })
     .state('moveEdit', {
