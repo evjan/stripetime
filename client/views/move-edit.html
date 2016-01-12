@@ -22,7 +22,18 @@
     </div>
     <div class="form-group">
       <label for="question_video_start">Question video start</label>
-      <input class="form-control" ng-model="newFlashCard.question_video_start" type="number" id="question_video_start"/>
+      <input class="form-control" ng-model="newFlashCard.question_video_start" type="text" id="question_video_start"/>
+      <button ng-click="copyFromVideo('question_video_start')">Take from video</button>
+    </div>
+    <div class="form-group">
+      <label for="question_video_start">Question video end</label>
+      <input class="form-control" ng-model="newFlashCard.question_video_end" type="text" id="question_video_end"/>
+      <button ng-click="copyFromVideo('question_video_end')">Take from video</button>
+    </div>
+    <div class="form-group">
+      <label for="question_video_start">Answer video end</label>
+      <input class="form-control" ng-model="newFlashCard.answer_video_end" type="text" id="answer_video_end"/>
+      <button ng-click="copyFromVideo('answer_video_end')">Take from video</button>
     </div>
     <button ng-click="save()">Save</button>
   </form>

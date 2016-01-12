@@ -29,6 +29,14 @@
       $scope.newFlashCard = {};
     };
 
+    $scope.copyFromVideo = function(inputId) {
+      $scope.newFlashCard[inputId] = $scope.pausedAt;
+    };
+
+    $scope.$on('youtube.player.paused', function($event, player) {
+      $scope.pausedAt = player.getCurrentTime();
+    });
+
     $scope.deleteMove = function(move) {
       Moves.remove({_id: move._id});
       $location.path('/moves/admin');
